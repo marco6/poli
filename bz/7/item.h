@@ -2,12 +2,7 @@
 #ifndef ITEM_H
 #define ITEM_H
 
-//Questo rappresenta cosa contiene l'elemento
-enum ItemType {
-	Intero = 0,
-	Stringa = 1,
-	Both = 2
-}//ItemType
+#include <stdio.h>
 
 typedef char Stringa[51];//Na cosa per semplificare la scrittura dopo
 
@@ -16,6 +11,13 @@ typedef struct both {
 	int i;
 	char s[51];
 } Both;
+
+//Questo rappresenta cosa contiene l'elemento
+typedef enum _it {
+	intero = sizeof(int),
+	stringa = sizeof(Stringa),
+	both = sizeof(Both)
+} ItemType;//ItemType
 
 //Ora, l'elemento è definito da un tipo e dai dati
 typedef struct __item {
@@ -29,8 +31,10 @@ typedef struct __item {
 	} data;
 } Item;
 
-void printItem(FILE*);
+//Stampa sul file, a seconda se char == 0 in modalità leggibile, se no in modalità binaria
+int printItem(const Item*, FILE*, char);
 
+//Carica un elemento da un file in modalità binaria
 Item loadItem(FILE*);
 
 //Genera l'elemento(vuoto)
