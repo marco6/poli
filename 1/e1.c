@@ -93,8 +93,6 @@ int main(){
 	/* Ora calcoliamo la nuova matrice */
 	computeMatrix(mat1, mat2, s);
 	
-	printMatrix(mat1, s, stdout);
-	
 	/* Stampiamo il risultato */
 	printMatrix(mat2, s, stdout);
 	
