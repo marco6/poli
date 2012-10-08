@@ -93,11 +93,13 @@ int main(){
 	/* Ora calcoliamo la nuova matrice */
 	computeMatrix(mat1, mat2, s);
 	
+	printMatrix(mat1, s, stdout);
+	
 	/* Stampiamo il risultato */
 	printMatrix(mat2, s, stdout);
 	
 	/* Ora controllo se e' simmetrica e stampo un messaggio  */
-	printf("La matrice prodotta%s è simmetrica.\n", (isSymmetric(mat2, s) ? "" : "non"));
+	printf("La matrice prodotta%s e' simmetrica.\n", (isSymmetric(mat2, s) ? "" : " non"));
 	
 	/* Bom */
 	return 0;
@@ -106,7 +108,7 @@ int main(){
 /* Passiamo a scrivere le funzioni */
 /* Questa e' la parte difficile del programma.. */
 void getMatrix(float mat[][MAX], unsigned int s, FILE* f){
-	int i, j = 0, 
+	int i, j = -1, 
 		p;/* Questa serve per evitare di leggere le stesse cose piu' volte  */
 	char *l;
 	/* Finche' c'e' ancora roba da leggere... */
@@ -117,7 +119,7 @@ void getMatrix(float mat[][MAX], unsigned int s, FILE* f){
 		if(!fgets(line, 128, f)) /* Controllo che abbia letto qualcosa... */
 			continue; /* Se non ha letto niente... Provaci ancora, sam! xD */
 		for(i = 0; i < s; i++){
-			if(!scanf(l, "%d %n", &mat[i][j], &p))
+			if(!sscanf(l, " %f%n", &mat[j][i], &p))
 				ERR ("Errore formattazione file." , 4)
 			/* Non consideriamo piu' il pezzo letto */
 			l += p;
