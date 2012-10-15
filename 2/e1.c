@@ -3,7 +3,7 @@
  *
  * Un’applicazione per la compressione di testi funziona in questo modo:
  *    - Dato un file di testo, l’applicazione individua anzitutto un’insieme di parole del testo (tipicamente lunghe e ripetute) 
-		che verranno poi elaborate come segue:
+ *		che verranno poi elaborate come segue:
  *    		- A ciascuna delle parole dell’insieme così costruito viene associato un intero univoco, con valore sempre compreso nell’intervallo [0 – 99]. 
  *			  L’applicazione riporta in un secondo file di testo ogni associazione intero/parola (una per riga).
  *			- Nel file di testo originale, infine, ogni parola che appartiene all’insieme viene sostituita dall’intero ad essa associato 
@@ -16,10 +16,11 @@
  * 			gcc -o e1 e1.c -Wall -pedantic
  * -Wall e -pedantic servono a rompere le palle per scrivere c-iso90
  */
- #include <stdio.h>/* Per le funzioni di input/output e per i file */
- #include <string.h>/* Per le funzioni per la memoria strcpy */
  
- #define OUT "out.txt"
+#include <stdio.h>/* Per le funzioni di input/output e per i file */
+#include <string.h>/* Per le funzioni per la memoria strcpy */
+ 
+#define OUT "out.txt"
  
 #define ERR(str, n) { fprintf(stderr, str); return n; }
  
