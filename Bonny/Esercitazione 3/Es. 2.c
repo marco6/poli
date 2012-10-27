@@ -5,8 +5,8 @@
 #define max_c 30
 
 int get_matrice(FILE *file, char mat[][max_c]);
-void selection_sort(int, char*);
-void swap(int, int, char*);
+void selection_sort(int, char *V[]);
+void swap(int, int, char *V[]);
 
 int main()
 {
