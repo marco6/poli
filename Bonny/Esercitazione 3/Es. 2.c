@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define max_r 100
 #define max_c 30
@@ -53,8 +54,8 @@ void selection_sort(int N, char *V[])
     {
         small = i;
         for(j=i+1; j<N; j++)
-            if(V[j]<V[small])         //qua non so se sia giusto avevo messo gli asterichi davanti a V[j] e V[small] perche
-                small = j;            //volevo che confrontasse quello a cui puntava l'indirizzo che c'era dentro alle due caselle ma midava errore
+            if(strcmp(V[j],V[small])>0)  //strcmp ridà un numero maggiore di zero se il char che ha letto (v[j])viene dopo
+                small = j;              //il secondo char (v[small])
         swap(small, i, V);
     }
 }
