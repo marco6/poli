@@ -20,7 +20,7 @@ int main()
         printf("il file non esiste o non e stato trovato");
         exit(1);
     }
-    tot_str = get_matrice(file1, matrice);   //funzione che mi memorizza la matrice e mi ridà quante righe ha letto
+    tot_str = get_matrice(file1, matrice);   //funzione che mi memorizza la matrice e mi ridï¿½ quante righe ha letto
     fclose(file1);
 
     for(i=0; i<tot_str; i++)
@@ -46,7 +46,7 @@ while(fgets(mat[i], max_c, f)!=NULL)
     return i;
 }
 
-void selection_sort(int N, char *V)
+void selection_sort(int N, char *V[])
 {
     int i,j, small;
     for(i=0; i<N-1; i++)
@@ -59,10 +59,10 @@ void selection_sort(int N, char *V)
     }
 }
 
-void swap(int a, int b, char *V)
+void swap(int a, int b, char *V[])
 {
     char *tmp=NULL;
-    *tmp=V[a];
+    tmp=V[a];
     V[a]=V[b];          //lo messa in modo che scambi gli indirizzi (o puntatori che dir si voglia :P)
-    V[b]=*tmp;
+    V[b]=tmp;
 }
