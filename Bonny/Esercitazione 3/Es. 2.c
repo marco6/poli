@@ -25,7 +25,7 @@ int main()
     fclose(file1);
 
     for(i=0; i<tot_str; i++)
-        vett[i]= &matrice[i];  //immagino che si faccia cosi per salvare i puntatori alle righe nel vettore o.o?
+        *vett[i]= &matrice[i];  //immagino che si faccia cosi per salvare i puntatori alle righe nel vettore o.o?
 
     selection_sort(tot_str,vett);   //ordina il il vettore a seconda di quello che ce dentro la casella 0 di ogni riga in pratica
 
@@ -63,7 +63,7 @@ void selection_sort(int N, char *V[])
 void swap(int a, int b, char *V[])
 {
     char *tmp=NULL;
-    tmp=V[a];
+    *tmp=V[a];
     V[a]=V[b];          //lo messa in modo che scambi gli indirizzi (o puntatori che dir si voglia :P)
-    V[b]=tmp;
+    V[b]=*tmp;
 }
