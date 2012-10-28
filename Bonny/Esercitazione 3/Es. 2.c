@@ -63,7 +63,7 @@ void selection_sort(int N, char *V[])
 void swap(int a, int b, char *V[])
 {
     char *tmp=NULL;
-    *tmp=V[a];
+    tmp=V[a];
     V[a]=V[b];          //lo messa in modo che scambi gli indirizzi (o puntatori che dir si voglia :P)
-    V[b]=*tmp;
+    V[b]=tmp;
 }
