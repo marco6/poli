@@ -4,7 +4,6 @@
 #include <string.h>
 
 #define WORD 20
-#define RAW 100
 
 void cerca (char *key, int dim);
 
@@ -36,10 +35,15 @@ int main()
     {
         cerca(testo, dim);
     }
+
+    fclose(f1);
+    fclose(f2);
+    free(word);
+
     for(j=0;j<dim;j++)
         printf("%s = %d occorrenza/e\n", word[j].key, word[j].occor);
     return 0;
-}
+}//main
 
 
 void cerca (char *testo, int dim)
@@ -51,6 +55,6 @@ void cerca (char *testo, int dim)
         {
             word[i].occor++;
             break;
-        }
-    }
-}
+        }//if
+    }//for
+}//void
