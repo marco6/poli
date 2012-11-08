@@ -8,7 +8,7 @@
  * 		- insertion sort
  * 		- selection sort
  * 		- bubble sort
- * 	- ripeta la generazione casuale e l’ordinamento per M volte.
+ * 	- ripeta la generazione casuale e lï¿½ordinamento per M volte.
  * Si confrontino le prestazioni dei tre algoritmi per i valori di M=10, 100, 1000 e di 
  * N=1000, 5000, 10000, misurandone i tempi di esecuzione.
  *
@@ -26,9 +26,9 @@ typedef struct __info {
 } Info;
 
 /* Io sono convinto che il programma diventi meno leggibile se spezzo tutto 
- * in funzioni... Comunque visto che vogliono così.. amen! */
+ * in funzioni... Comunque visto che vogliono cosï¿½.. amen! */
 Info getArgs(int argc, char*argv[]);
-void bubbleSort(int, int*);/* Le bolle più grandi vengono a galla */
+void bubbleSort(int, int*);/* Le bolle piï¿½ grandi vengono a galla */
 void selectionSort(int, int*);
 void insertionSort(int, int*);
 void swap(int*, int*);
@@ -39,7 +39,7 @@ int main(int argc, char*argv[]){
 	int *vect, i; /* Qui il vettore di interi */
 	void (*sortFunc[])(int, int*) = { 
 			bubbleSort, selectionSort, insertionSort 
-		}; /* E.. sì questa è una bastardata xD
+		}; /* E.. sï¿½ questa ï¿½ una bastardata xD
 			* Sono puntatori a funzioni(ebbene: esistono!!) xD*/
 	if(argc < 3)
 		return -1;
@@ -56,7 +56,7 @@ int main(int argc, char*argv[]){
 		/* e ora ordiniamo! */
 		sortFunc[(int)spec.algorithm](spec.N, vect);
 	}/* for */
-
+	free(vect);
 	if(spec.timing){
 		t = clock() - t;
 		printf("Tempo impiegato: %f sec\n", (float)(t)/CLOCKS_PER_SEC);/* Comunque: col cazzo che faccio davvero i test di performance! xD */
@@ -69,7 +69,7 @@ Info getArgs(int argc, char*argv[]){/* Restituisce le informazioni passate da li
 	Info ret;
 	memset(&ret, 0, sizeof(Info));/* Azzeriamo tutti i valori! */
 	for(argc--; argc > 2; argc--){
-		/* Se è non è una flag, ignoriamola */
+		/* Se ï¿½ non ï¿½ una flag, ignoriamola */
 		if(argv[argc][0] == '-' && argv[argc][2] == '\0')
 			switch(argv[argc][1]){
 				case 't':/* timing */
@@ -95,8 +95,8 @@ Info getArgs(int argc, char*argv[]){/* Restituisce le informazioni passate da li
 	return ret;
 }/* getArgs */
 
-void bubbleSort(int i, int* v){ /* Che poi su wikipedia ti spiega magari anche il perchè si fa così.. */
-	int j;/* Bah.. il senso di darci già il codice pronto e farcelo tradurre... MISTERO! xD */
+void bubbleSort(int i, int* v){ /* Che poi su wikipedia ti spiega magari anche il perchï¿½ si fa cosï¿½.. */
+	int j;/* Bah.. il senso di darci giï¿½ il codice pronto e farcelo tradurre... MISTERO! xD */
 	for (i--; i > 0; i--){
 		for( j = 0; j < i; j++)
 			if(v[j] > v[j+1]){
