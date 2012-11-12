@@ -31,7 +31,7 @@ int main()
 
     file2=fopen("scrittura.txt","w");
 
-    for(i=0;i<tot_str;i++)
+    for(i=0; i<tot_str; i++)
         fprintf(file2,"%s", vett[i]); //qua scrivo dentro al secondo file
 
     fclose(file2);
@@ -42,7 +42,7 @@ int main()
 int get_matrice(FILE *f, char mat[][max_c])
 {
     int i=0;
-while(fgets(mat[i], max_c, f)!=NULL)
+    while(fgets(mat[i], max_c, f)!=NULL)
         i++;
     return i;
 }

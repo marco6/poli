@@ -14,12 +14,12 @@ int main()
     int M, N, i, j, k, *vett;
     float t0, t1;
 
-while(1)
-{
-    printf("inserire M ed N\n");
-    scanf("%d" "%d", &M,&N);
-    printf("Inserire quale funzione si vuole usare:\n1)Insertion sort\n2)Selection sort\n3)Bubble sort\n0)Esci.");
-    scanf("%d", &k);
+    while(1)
+    {
+        printf("inserire M ed N\n");
+        scanf("%d" "%d", &M,&N);
+        printf("Inserire quale funzione si vuole usare:\n1)Insertion sort\n2)Selection sort\n3)Bubble sort\n0)Esci.");
+        scanf("%d", &k);
         t0 = ((float)clock())/CLOCKS_PER_SEC;
         vett=malloc(N*sizeof(int));
         for(i=0; i<M; i++)
@@ -47,7 +47,7 @@ while(1)
         t1 = ((float)clock())/CLOCKS_PER_SEC;
         printf("Tempo in secondi per %d ripetizioni: %f\n",M,t1-t0);
         free(vett);
-}
+    }
     return 0;
 } //main
 
