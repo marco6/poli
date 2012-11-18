@@ -1,17 +1,18 @@
 #include <stdio.h>
 
 //Dato base
-typedef struct data {
-	//Bisogna metterli in ordine di significato, quindi.. anno>mese>giorno
-	unsigned int y:15;//15 bit per andare da 0 fino a 32767... mi dispiace per jesù, ma gli anni negativi non li conto xD
-	unsigned int m:4;//month:
-	unsigned int d:5;//Quì è facile.. da 1 a 31:5bit
-} Data;
+//Numero di giorni passati dall'anno 1/1/0.. mi dispiace per gesù, ma degli anni a.c. non me ne frega cazzi :P
+//                                     ||
+//                                     \/
+//                          A natale tutti sono più buoni *.*
+typedef unsigned long Data;
 
 Data buildData(int,int,int);
-Data buildData(char*,char*);
+Data readData(FILE*);
 
 Data dataDiff(Data, Data);
 
-char* printData(char*, char*, Data);
-void printData(FILE*, char*, Data);
+void printData(FILE*, Data);
+
+#define dataMax(a,b) (a)>(b) ? (a) : (b)
+#define dataMin(a,b) (a)<(b) ? (a) : (b)
