@@ -15,10 +15,10 @@ int main(int argc, char*argv[]){
 	
 	f = fopen(argv[1], "r");//Apro il file
 	i = start = (Item*)malloc(sizeof(Item)); //Alloco il primo
-	fgets(i->s, 5, f);//E lo riempio
+	fscanf(f, " %s ", i->s);//E lo riempio
 	while(!feof(f)){//Se c'è roba.. Anche se feof potrebbe dare errore, fidiamoci :P
 		i = i->next = (Item*)malloc(sizeof(Item));
-		fgets(i->s, 5, f);
+		fscanf(f, " %s ", i->s);
 	}//While
 	i->next = NULL;//Ok c'abbiamo la lista...
 	
@@ -27,7 +27,7 @@ int main(int argc, char*argv[]){
 }
 
 void itera(Item*start, Item *i){
-	if(i==NULL || !i->s[0]){
+	if(i==NULL){
 		putchar('-');
 		//Ok, ora si stampa!
 		i = start;
