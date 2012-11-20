@@ -1,7 +1,7 @@
 #include "data.h"
 
 Data buildData(int day, int month, int year){
-	return year * 360 + month * 30 + day - 1;
+	return year * 360 + month * 30 + day - 31;
 }
 
 Data readData(FILE*f){
@@ -15,5 +15,5 @@ Data dataDiff(Data a, Data b){
 }//dataDiff
 
 void printData(FILE*f, Data d){
-	fprintf(f,"%d/%d/%d", d % 30 + 1, (d % 360)/30, d/360);
+	fprintf(f,"%d/%d/%d", d % 30 + 1, (d % 360)/30 + 1, d/360);
 }
