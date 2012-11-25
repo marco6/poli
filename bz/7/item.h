@@ -1,5 +1,7 @@
+//Queste sono le sentinelle, paladine della pace xD
 #ifndef ITEM_H
 #define ITEM_H
+
 //Questo rappresenta cosa contiene l'elemento
 enum ItemType {
 	Intero = 0,
@@ -20,18 +22,23 @@ typedef struct __item {
 	ItemType type;//Tipo
 	union {//Dati
 		//tutti... vicini vicini xD
-		int i;
+		int *i;
 		Stringa *s;
 		Both *b;
+		void *generic;
 	} data;
 } Item;
+
+void printItem(FILE*);
+
+Item loadItem(FILE*);
 
 //Genera l'elemento(vuoto)
 Item createItem(ItemType);
 
 //Riempie l'elemento
-void itemCopy(Item*i, void*data);
+void itemFill(Item*,void*);
 
 //Elimina l'elemento
-void deleteItem(Item *i);
+void deleteItem(Item*);
 #endif
