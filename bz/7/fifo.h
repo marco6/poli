@@ -33,7 +33,7 @@ typedef struct _fifoPotter {
 //Ora le funzioni:
 
 // - creazione di una nuova struttura (vuota).
-FIFO lifo_new();//Restituisce una lista vuota
+FIFO fifo_new();//Restituisce una lista vuota
 
 // - inserimento di un nuovo elemento della struttura.
 int fifo_enqueue(FIFO*, Item);//Restituisce la dimensione della nuova lista
@@ -50,6 +50,7 @@ void fifo_save(const FIFO*, FILE*);
 // - caricamento di una nuova base dati da file (opzionale).
 FIFO fifo_load(FILE*);
 
+void fifo_unload(FIFO*);
 
 int fifo_size(FIFO*);
 #endif

@@ -35,7 +35,7 @@ typedef struct __item {
 int printItem(const Item*, FILE*, char);
 
 //Carica un elemento da un file in modalità binaria
-Item loadItem(FILE*);
+int loadItem(FILE*, Item*);
 
 //Genera l'elemento(vuoto)
 Item createItem(ItemType);

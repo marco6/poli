@@ -14,7 +14,7 @@ Item createItem(ItemType t){
 //Riempie l'elemento
 void itemFill(Item*i, void*data){
 	//Inizializziamo la memoria e copiamoci dentro il tutto
-	memcpy(i->data.generic = malloc((int)i->type), data, (int)i->type);//Apposto
+	memcpy(i->data.generic = calloc(1,(int)i->type), data, (int)i->type);//Apposto
 }//itemFill
 
 //Elimina l'elemento
@@ -24,29 +24,27 @@ void deleteItem(Item *i){
 }//deleteItem
 
 int printItem(const Item *i, FILE* out, char binary){
-	if(binary)//Se dobbiamo salvarlo, salviamo il tipo di file 
+	if(binary){//Se dobbiamo salvarlo, salviamo il tipo di file 
 			  //e il contenuto in modalità binaria
 		return fwrite(&i->type, sizeof(ItemType), 1,out) &&
 			fwrite(i->data.generic, (int)i->type, 1, out);
-
+	}
 	switch(i->type){
 		case intero:
 			return fprintf(out, "int(%d)", *i->data.i);//Stampiamo l'intero
 		case stringa:
-			return fprintf(out, "string(\n%s\n)", (char*)i->data.s);//La stringa
+			return fprintf(out, "string(\n\t%s\n)", *i->data.s);//La stringa
 		case both:
 			//O entrambi
-			return fprintf(out, "struct {\n\tint(%d)\n\tstring(\n\t\t%s\n\t)\n}", *i->data.i, (char*)i->data.s);
+			return fprintf(out, "struct {\n\tint(%d)\n\tstring(\n\t\t%s\n\t)\n}", i->data.b->i, i->data.b->s);
 		default:
 			return 0;
 	}//Switch
 }//printItem
 
-Item loadItem(FILE* in){
-	Item r;
+int loadItem(FILE* in, Item*r){
 	//Leggiamo il tipo
-	fread(&r.type, sizeof(ItemType), 1, in);
-	//E usiamolo come lunghezza
-	fread(r.data.generic = malloc(r.type), r.type, 1, in);
-	return r;//Restituiamo il risultato
+	return fread(&r->type, sizeof(ItemType), 1, in) && 
+			//E usiamolo come lunghezza
+			fread(r->data.generic = malloc(r->type), r->type, 1, in);
 }//loadItem
