@@ -6,8 +6,15 @@ typedef struct graph * graph;
 
 typedef struct edge {
 	unsigned int from, to;
-	int w;
+	float w;
 } edge;
+
+enum edge_type {
+	back,
+	cross,
+	tree,
+	forward;
+};
 
 extern edge edge_new(int, int, int);
 
@@ -25,7 +32,7 @@ extern edge * graph_edges(graph);
 
 extern void graph_free(graph);
 
-extern void graph_dfv(graph);
+extern void graph_dfv(graph, int, void*, void (*visit)(int, void*));
 
 /** 
   * Restituisce le lunghezze dei minimi cammini partendo da un nodo.
@@ -34,6 +41,6 @@ extern void graph_dfv(graph);
   */
 extern int * dijkstra(graph g, int from, int*tree, int (*add)(int, int));
 
-extern int * bellman_ford(graph g, int from, int *tree, float (*add)(float, float));
+extern float * bellman_ford(graph g, int from, int *tree, int*negativeLoop, float (*add)(float, float));
 
 #endif

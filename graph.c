@@ -3,6 +3,7 @@
 #include <assert.h>
 #include <graph.h>
 #include <heap.h>
+#include <math.h>
 
 //grafo implementato con la matrice di adiacenza
 struct graph {
@@ -10,7 +11,7 @@ struct graph {
 	size_t v;//Numero di vertici
 	size_t e;//Numero di archi
 	unsigned int orientato:1,
-		has_gaps;//bitfield, sempre per bonato xD!! 
+		has_gaps:1;//bitfield, sempre per bonato xD!! 
 		//(cmq sta cazzata non la metterei nella relazione, anche se è standard)
 	signed int connesso:2;
 };
@@ -102,7 +103,7 @@ edge * graph_edges(graph g){
 	//alloco il necessario, per non dover allocare di nuovo.
 	int i, j, es;
 	edge*e;
-	if(g == NULL || out == NULL)
+	if(g == NULL)
 		return NULL;
 	e = malloc(sizeof(edge) * g->e);
 	for(i = es = 0; i < g->v; i++)
@@ -116,27 +117,26 @@ edge * graph_edges(graph g){
 
 //implemento dijkstra
 int * dijkstra(graph g, int from, int*tree, int (*add)(int, int)){
-	size_t vertex;
 	int * somme, i, act;//Commistione linguistica che bonato ama! xD
 	heap_t *heap;//Questa copiata di brutto da Rocco xD
 	//Becco il numero di vertici
-	vertex = graph_vertex(g);
-	//Ok ora alloco lo spazio per le somme
-	somme = malloc(sizeof(int) * vertex);
+	somme = malloc(sizeof(int) * g->v);
 	
 	assert(somme != NULL);
 	
 	//E piazzo tutto a -1 che in binario è 11111111....1111 ... fino alla nausea... 1111
-	memset(somme, 0xff, vertex * sizeof(int));
+	memset(somme, 0xff, g->v * sizeof(int));
+
 	//Good! Ora però la prima va a 0!
 	somme[from] = 0;
+
 	//Ci siamo quasi...
 	//ora le heap!
-	heap = heap_make(somme, vertex, heapcmp, sizeof(int));
+	heap = heap_make(somme, g->v, heapcmp, sizeof(int));
 	//Metto a TRUE la flag *connected
 	g->connesso = 1;
 	//Ultimissima cosa: inizializzo l'albero delle visite ad una foresta di alberi di un solo elemento
-	for(i = 0; i < vertex; i++)
+	for(i = 0; i < g->v; i++)
 		tree[i] = i;
 	//Ora il ciclo, prepariamo l'assorbente xD
 	while(!heap_is_empty(heap)){
@@ -153,7 +153,7 @@ int * dijkstra(graph g, int from, int*tree, int (*add)(int, int)){
 			break;
 		}
 		//E itero tra tutto
-		for(i = 0; i < vertex; i++){
+		for(i = 0; i < g->v; i++){
 			if(g->adj[from][i]){
 				//Mi calcolo la distanza attuale + quella dell'arco tramite una funzione esterna
 				act = add(somme[from], g->adj[from][i]);
@@ -173,21 +173,40 @@ int * dijkstra(graph g, int from, int*tree, int (*add)(int, int)){
 	return somme;
 }//Bah, anche se steve dice che non ci va molto a scriverla... io ce ne ho messo u.u
 
-int* bellman_ford(graph g, int from, int *tree, int *negativeLoop, float (*add)(float, float)){
+float* bellman_ford(graph g, int from, int *tree, int *negativeLoop, float (*add)(float, float)){
 	float *dist, act;
 	int i, j;
 	edge * edges;
-	size_t vertex;
+	*negativeLoop=1;
 	//mi prendo i vertici
-	vertex = graph_vertex(g);
-	dist = malloc(sizeof(float) * vertex);
-	edges = graph_edges(g);//estraggo i vertici
-	for(i = 0; i < vertex; i++)
+	dist = malloc(sizeof(float) * g->v);
+	edges = graph_edges(g);//estraggo gli archi
+	for(i = 0; i < g->v; i++)
 		dist[i] = INFINITY; //Metto tutto a infinito... Purtroppo nello standard ansi c 90 non esiste la possibilita' di usare questa istruzione...
-	//Ora il loop principale!
-	for(j = 0, flag = 1; j < vertex && flag; j++){
-		for(i = 0; i < vertex; i++){
-			act = e[i]
+	dist[from]=0;
+	for(i=0; i<g->v && *negativeLoop; i++)
+	{
+		for(j=*negativeLoop=0; j<g->e;j++)
+		{
+			act = add(dist[edges[j].from], edges[j].w);
+			if(act<dist[edges[j].to])
+			{
+				tree[edges[j].to]=edges[j].from;
+				dist[edges[j].to]=act;
+				*negativeLoop=1;
+			}
 		}
 	}
+	
+	*negativeLoop = *negativeLoop && (i==g->v);
+	for(i=0; i<g->v && dist[i]!=INFINITY; i++) {}
+
+    g->connesso= (i==g->v); 
+    return dist;
+}
+
+
+void graph_dfv(graph g, int s, void*data, void (*visit)(int, void*)){
+	
+	
 }
