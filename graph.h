@@ -21,7 +21,7 @@ extern size_t graph_vertex(graph);
 
 extern int graph_is_connected(graph);
 
-extern edge * graph_adjacency(graph, int, size_t *);
+extern edge * graph_edges(graph);
 
 extern void graph_free(graph);
 
@@ -34,5 +34,6 @@ extern void graph_dfv(graph);
   */
 extern int * dijkstra(graph g, int from, int*tree, int (*add)(int, int));
 
+extern int * bellman_ford(graph g, int from, int *tree, float (*add)(float, float));
 
 #endif

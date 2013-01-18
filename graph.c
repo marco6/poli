@@ -46,6 +46,7 @@ graph graph_init(size_t s, int orientato){
 	r->orientato = orientato != 0;
 	r->has_gaps = 0;//non ha archi!
 	r->connesso = -1;
+	r->v = r->e = 0;
 	return r;
 }
 
@@ -59,6 +60,7 @@ void graph_insert(graph g, edge e){
 		g->adj[e.from][e.to] = 1;
 	if(e.from == e.to)
 		g->has_gaps = 1;
+	g->e++;
 }
 
 void graph_remove(graph g, edge e){
@@ -68,6 +70,7 @@ void graph_remove(graph g, edge e){
 	//Quindi lo segnamo
 	g->connesso = -1;
 	g->adj[e.from][e.to] = 0;
+	g->e--;
 }
 
 void graph_free(graph g){
@@ -83,37 +86,37 @@ size_t graph_vertex(graph g){
 }
 
 static int heapcmp (void *a, void *b){
-	if(*(int*)a == -1)
+	if(*(int*)a == -1 || *(int*)b == -1)
 		return 1;
 	return *(int*)a - *(int*)b;
 }
 
 int graph_is_connected(graph g){
-	if(g->connesso == -1)//Se non lo so
-		graph_dfv(g);//Me lo ricavo
+	//non implementato!
+	//if(g->connesso == -1)//Se non lo so
+		//graph_dfv(g);//Me lo ricavo
 	return g->connesso;
 }
 
-edge * graph_adjacency(graph g, int from, size_t *out){
+edge * graph_edges(graph g){
 	//alloco il necessario, per non dover allocare di nuovo.
-	int i;
+	int i, j, es;
 	edge*e;
 	if(g == NULL || out == NULL)
 		return NULL;
-	*out = 0;
-	e = malloc(sizeof(edge) * sizeof(g->v));
-	for(i = 0; i < g->v; i++)
-		if(g->adj[from][i]){
-			e[*out] = edge_new(from, i, g->adj[from][i]);
-			*out += 1;
-		}
+	e = malloc(sizeof(edge) * g->e);
+	for(i = es = 0; i < g->v; i++)
+		for(j = 0; j < g->v; j++)
+			if(g->adj[i][j]){
+				e[es] = edge_new(i, j, g->adj[i][j]);
+				es++;
+			}
 	return e;
 }
 
 //implemento dijkstra
 int * dijkstra(graph g, int from, int*tree, int (*add)(int, int)){
-	edge *adj;
-	size_t adj_size, vertex;
+	size_t vertex;
 	int * somme, i, act;//Commistione linguistica che bonato ama! xD
 	heap_t *heap;//Questa copiata di brutto da Rocco xD
 	//Becco il numero di vertici
@@ -149,26 +152,42 @@ int * dijkstra(graph g, int from, int*tree, int (*add)(int, int)){
 			//interrompo il ciclo
 			break;
 		}
-		//Adesso mi ricavo la lista di adiacenza sottoforma di vettore
-		adj = graph_adjacency(g, from, &adj_size);
 		//E itero tra tutto
-		for(i = 0; i < adj_size; i++){
-			//Mi calcolo la distanza attuale + quella dell'arco tramite una funzione esterna
-			act = add(somme[from], adj[i].w);
-			//Se la somma è a -1 (non è ancora stato aggiornato) oppure il nuovo valore
-			// e' inferiore a quello vecchio, lo metto uguale e aggiorno l'albero delle visite
-			if(somme[adj[i].to] == -1 || somme[adj[i].to] > act){
-				somme[adj[i].to] = act;
-				tree[adj[i].to] = from;
-				//Ho aggiornato: devo fare un fix della heap che potrebbe essere andata a farsi fottere!
-				heap_fix(heap, adj[i].to);
-			}//if
+		for(i = 0; i < vertex; i++){
+			if(g->adj[from][i]){
+				//Mi calcolo la distanza attuale + quella dell'arco tramite una funzione esterna
+				act = add(somme[from], g->adj[from][i]);
+				//Se la somma è a -1 (non è ancora stato aggiornato) oppure il nuovo valore
+				// e' inferiore a quello vecchio, lo metto uguale e aggiorno l'albero delle visite
+				if(somme[i] == -1 || somme[i] > act){
+					somme[i] = act;
+					tree[i] = from;
+					//Ho aggiornato: devo fare un fix della heap che potrebbe essere andata a farsi fottere!
+					heap_fix(heap, i);
+				}//if
+			}
 		}//for
-		//Ora elimino la copia della lista di adiacenza che avevo ottenuto dal grafo
-		free(adj);
 	}//while
 	heap_free(heap);//Questa non mi cancella l'array somme, quindi sono contento xD
 	//Bene! abbiamo finito! :)
 	return somme;
 }//Bah, anche se steve dice che non ci va molto a scriverla... io ce ne ho messo u.u
 
+int* bellman_ford(graph g, int from, int *tree, int *negativeLoop, float (*add)(float, float)){
+	float *dist, act;
+	int i, j;
+	edge * edges;
+	size_t vertex;
+	//mi prendo i vertici
+	vertex = graph_vertex(g);
+	dist = malloc(sizeof(float) * vertex);
+	edges = graph_edges(g);//estraggo i vertici
+	for(i = 0; i < vertex; i++)
+		dist[i] = INFINITY; //Metto tutto a infinito... Purtroppo nello standard ansi c 90 non esiste la possibilita' di usare questa istruzione...
+	//Ora il loop principale!
+	for(j = 0, flag = 1; j < vertex && flag; j++){
+		for(i = 0; i < vertex; i++){
+			act = e[i]
+		}
+	}
+}
