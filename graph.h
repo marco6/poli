@@ -13,7 +13,7 @@ enum edge_type {
 	back,
 	cross,
 	tree,
-	forward;
+	forward
 };
 
 extern edge edge_new(int, int, int);

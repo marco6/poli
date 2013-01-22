@@ -172,7 +172,7 @@ heap_remove (
 )
 {
   int i, pos=hp->qp[idx];
-  void *iv, *xv;
+  char *iv, *xv;
 
   assert(pos >= 0);
   i = hp->pq[--hp->num];
@@ -181,9 +181,9 @@ heap_remove (
   hp->qp[idx] = -1;
 
   if (hp->num>1 && i!=idx) {
-    iv = hp->data + hp->elem_size * i;
-    xv = hp->data + hp->elem_size * idx;
-    if ((*hp->cmp)(iv, xv) > 0) {
+    iv = (char*)hp->data + hp->elem_size * i;
+    xv = (char*)hp->data + hp->elem_size * idx;
+    if ((*hp->cmp)((void*)iv, (void*)xv) > 0) {
       heap_fix_up(hp, i);
     } else {
       heap_fix_down(hp, i);
@@ -221,12 +221,12 @@ heap_fix_up (
 {
   int *qp=hp->qp, *pq=hp->pq;
   int i=qp[idx], p=heap_parent(i), t;
-  void *iv, *pv;
+  char *iv, *pv;
 
   while (i > 0) {
-    iv = hp->data + hp->elem_size * pq[i];
-    pv = hp->data + hp->elem_size * pq[p];
-    if ((*hp->cmp)(iv, pv) <= 0) {
+    iv =(char*) hp->data + hp->elem_size * pq[i];
+    pv = (char*)hp->data + hp->elem_size * pq[p];
+    if ((*hp->cmp)((void*)iv, (void*)pv) <= 0) {
       return;
     }
     t = pq[i]; pq[i] = pq[p]; pq[p] = t;
@@ -250,20 +250,20 @@ heap_fix_down (
 {
   int *qp=hp->qp, *pq=hp->pq;
   int i=hp->qp[idx], l, p, r, t;
-  void *iv, *lv, *rv;
+  char *iv, *lv, *rv;
 
   do {
     p = i; l = heap_left(i); r = heap_right(i);
-    iv = hp->data + hp->elem_size * pq[i];
+    iv = (char*)hp->data + hp->elem_size * pq[i];
     if (l < hp->num) {
-      lv = hp->data + hp->elem_size * pq[l];
-      if ((*hp->cmp)(lv, iv) > 0) {
+      lv = (char*)hp->data + hp->elem_size * pq[l];
+      if ((*hp->cmp)((void*)lv, (void*)iv) > 0) {
         i = l; iv = lv;
       }
     }
     if (r < hp->num) {
-      rv = hp->data + hp->elem_size * pq[r];
-      if ((*hp->cmp)(rv, iv) > 0) {
+      rv = (char*)hp->data + hp->elem_size * pq[r];
+      if ((*hp->cmp)((void*)rv, (void*)iv) > 0) {
         i = r; iv = rv;
       }
     }
