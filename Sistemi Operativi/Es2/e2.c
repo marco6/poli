@@ -74,6 +74,7 @@ void print_dir_d(const struct dirent*d, int lv) {
       print_dir_d(de, lv+1);
     }
     chdir("..");
+	closedir(dr);
   }
   else
     printf("File %.2d: %s\n", count++, d->d_name);
