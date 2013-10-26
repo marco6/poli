@@ -5,6 +5,4 @@ all: Es1.o Es2.o
 .PHONY: clean
 
 clean:
-	rm ./*.o
-	rm ./*~
-	rm copy
+	rm -f ./*.o ./*~ copy e2
