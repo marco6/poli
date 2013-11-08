@@ -1,0 +1,43 @@
+EESchema-DOCLIB  Version 2.0  Date: gio 07 nov 2013 12:09:35 CET
+#
+$CMP 74HC14P
+D Schmitt inverter 74hc14 con piedinatura
+K 74hc14 schmitt inverter comparatore soglia
+$ENDCMP
+#
+$CMP CD4040
+D Contatore asincrono
+K contatore asincrono cd4040
+$ENDCMP
+#
+$CMP GENERATORE_DI_VOLTAGGIO
+D generatore di voltaggio
+K volt generatore voltaggio voltage generator
+$ENDCMP
+#
+$CMP NAND
+D porta nand
+K nand porta port
+$ENDCMP
+#
+$CMP POTENZIMETRO
+D potenzimetro 
+K potenzimetro sto cazzo
+$ENDCMP
+#
+$CMP RESISTORE
+D resistore
+K resistor r resistore resistenza
+$ENDCMP
+#
+$CMP SALTO
+D salto di filo
+K salto
+$ENDCMP
+#
+$CMP TERRA
+D terra
+K ground gnd terra
+$ENDCMP
+#
+#End Doc Library

@@ -1,0 +1,197 @@
+EESchema Schematic File Version 2  date gio 07 nov 2013 10:50:55 CET
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:poliStyle
+LIBS:prova-cache
+EELAYER 25  0
+EELAYER END
+$Descr A4 11700 8267
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "7 nov 2013"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	5750 3350 5750 3650
+Wire Wire Line
+	5750 3350 6000 3350
+Wire Wire Line
+	4950 3850 4650 3850
+Wire Wire Line
+	5650 4150 6000 4150
+Wire Wire Line
+	5650 3750 6000 3750
+Connection ~ 3700 4050
+Wire Wire Line
+	3900 4050 3700 4050
+Wire Wire Line
+	4200 3250 4200 3200
+Wire Wire Line
+	4950 3650 4950 3000
+Wire Wire Line
+	4950 3000 3700 3000
+Wire Wire Line
+	3700 3000 3700 4200
+Connection ~ 3700 4200
+Wire Wire Line
+	3500 4600 6000 4600
+Connection ~ 6000 3950
+Wire Wire Line
+	6000 4600 6000 3750
+Connection ~ 4950 4600
+Connection ~ 4650 4600
+Wire Wire Line
+	4650 3850 4650 4600
+Connection ~ 3900 4200
+Wire Wire Line
+	4950 4250 4950 4600
+Connection ~ 3900 4600
+Wire Wire Line
+	4800 4600 4800 4050
+Connection ~ 4800 4600
+Connection ~ 6000 4150
+Wire Wire Line
+	3500 4200 3900 4200
+Wire Wire Line
+	4600 3200 4600 3750
+Connection ~ 4600 3450
+Wire Wire Line
+	4600 3450 4850 3450
+Wire Wire Line
+	4850 3450 4850 3750
+Wire Wire Line
+	4200 3700 4200 3750
+Wire Wire Line
+	3900 3600 3900 3450
+Wire Wire Line
+	5750 3650 5650 3650
+Wire Wire Line
+	5650 3950 6000 3950
+Wire Wire Line
+	4850 3750 4950 3750
+Wire Wire Line
+	4800 4050 4950 4050
+$Comp
+L RESISTORE 100~K~Ohm
+U 1 1 527A7A2D
+P 3900 3850
+F 0 "100 K Ohm" V 4020 3850 40  0000 R CNN
+F 1 "RESISTORE" H 3900 3900 60  0001 L CNN
+F 2 "~" H 3900 3900 60  0000 C CNN
+F 3 "~" H 3900 3900 60  0000 C CNN
+	1    3900 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L POTENZIMETRO R?
+U 1 1 527A79D2
+P 4200 3450
+F 0 "R?" H 4350 3450 60  0001 C CNN
+F 1 "POTENZIMETRO" H 4200 3500 60  0001 C CNN
+F 2 "~" H 4200 3500 60  0000 C CNN
+F 3 "~" H 4200 3500 60  0000 C CNN
+	1    4200 3450
+	-1   0    0    1   
+$EndComp
+$Comp
+L TERRA GND?
+U 1 1 527A6D5C
+P 3700 4700
+F 0 "GND?" H 4000 4700 60  0001 C CNN
+F 1 "TERRA" H 3700 4700 60  0001 C CNN
+F 2 "~" H 3700 4700 60  0000 C CNN
+F 3 "~" H 3700 4700 60  0000 C CNN
+	1    3700 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74HC14P U?
+U 1 1 527A6CEF
+P 5300 4000
+F 0 "U?" H 5300 4000 60  0001 C CNN
+F 1 "74HC14" V 5300 4000 60  0000 C CNN
+	1    5300 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L GENERATORE_DI_VOLTAGGIO 5~V
+U 1 1 527A6CB2
+P 6000 3550
+F 0 "5 V" V 5800 3550 60  0000 C CNN
+F 1 "GENERATORE_DI_VOLTAGGIO" H 6000 3550 60  0001 C CNN
+F 2 "~" H 6000 3550 60  0000 C CNN
+F 3 "~" H 6000 3550 60  0000 C CNN
+	1    6000 3550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L DIODE D?
+U 1 1 527A2C11
+P 4400 3750
+F 0 "D?" H 4400 3850 40  0001 C CNN
+F 1 "DIODE" H 4400 3650 40  0000 C CNN
+	1    4400 3750
+	-1   0    0    1   
+$EndComp
+$Comp
+L DIODE D?
+U 1 1 527A2BF3
+P 4400 3200
+F 0 "D?" H 4400 3300 40  0001 C CNN
+F 1 "DIODE" H 4400 3100 40  0000 C CNN
+	1    4400 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L C 0.2~nF
+U 1 1 527A1EDF
+P 3500 4400
+F 0 "0.2 nF" H 3550 4500 50  0000 L CNN
+F 1 "0.2 nF" H 3550 4300 50  0001 L CNN
+	1    3500 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L C 1~nF
+U 1 1 527A1ED1
+P 3900 4400
+F 0 "1 nF" H 3950 4500 50  0000 L CNN
+F 1 "C" H 3950 4300 50  0001 L CNN
+	1    3900 4400
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

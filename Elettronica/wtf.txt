@@ -1,1 +1,0 @@
-Oi volevo solo avvertire che qui ci piazzo la libreria... essendo un file di testo dovrebbe andare bene usare git ;)
