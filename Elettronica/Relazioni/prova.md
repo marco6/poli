@@ -16,4 +16,4 @@ senza *burdell* per tuc).
 - *corsivo*
 - _sottolineato_
 - **grassetto**
-- immagini: ![alt text](https://raw.github.com/marco6/poli/master/Elettronica/Schemi/Lab3/circuito_1.png "circuito di bonato" 1)
+- immagini: ![alt text](https://raw.github.com/marco6/poli/master/Elettronica/Schemi/Lab3/circuito_1.png "circuito di bonato 1")
