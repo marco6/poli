@@ -1,11 +1,11 @@
 #include <stdio.h>
+#include <sys/wait.h>
 #include <unistd.h>
 
-#define N 1 << 
 
-typedef int (*func)();
+typedef void (*func)();
 
-#define E(name) int name() { puts("Sono il processo " #name ); sleep(1); }
+#define E(name) void name() { puts("Sono il processo " #name ); sleep(1); }
 
 E(P1)
 E(P1L)
