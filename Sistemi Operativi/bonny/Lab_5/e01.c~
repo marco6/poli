@@ -35,7 +35,7 @@ int main(){
     }
     else{
       printf("P4 pid: %d\n", getpid());
-      while(wait(NULL) != pid_5)
+      while(wait() != pid_5)
       printf("P7 pid: %d\n", getpid());
     }
   }

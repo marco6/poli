@@ -1,0 +1,11 @@
+1. sudo find / -name '*.exe' -size +500c -executable
+2. sudo find / -name '.*c' -size +100c -print
+3. sudo find / -type f /( -regex ".*a.*A.*" -or -regex ".*A.*a.*" \) // trova a e A
+4. sudo find / -mindepth 3 -maxdepth 5 -name "????" -size +250c -exec wc -m -- '{}' ';' // conta carat	
+4. sudo find / -mindepth 3 -maxdepth 5 -name "????" -size +250c -exec wc -l -- '{}' ';' // conta righe
+5. sudo find / -name "A*zzz*.???" -exec gzip '{}' ';'
+6. sudo find / -name "bin" -exec ls '{}' ';'
+7. sudo find /            ?
+8. sudo find / -mindepth 1 -maxdepth 1 -exec chmod 700 '{}' ';'
+
+1. sort --reverse ./l06e03.txt
