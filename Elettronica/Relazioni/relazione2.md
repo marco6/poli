@@ -1,55 +1,39 @@
-﻿### RELAZIONE DI LABORATORIO – ELETTRONICA
-### ESERCITAZIONE 2 – GENERATORE DI ONDA QUADRA E CONTATORE ASINCRONO 
+### RELAZIONE DI LABORATORIO – ELETTRONICA
+#### ESERCITAZIONE 2 – GENERATORE DI ONDA QUADRA E CONTATORE ASINCRONO 
 **(Giovedì 24 Ottobre 2013)**
 
 SQUADRA A06  – LED 9
 
-Nome:		 BONATO Alessio		____________________________
 
-Matricola:		180472
-
-Nome:		 DI BIASE Armonia	____________________________
-
-Matricola:		181325
-
-Nome: 		 MANINO Marco		____________________________
-
-Matricola:		180678
-
-Nome:	  	 MANTOVANI Alessia	____________________________
-
-Matricola:		180812
-
-•	**Elenco dei dispositivi:**
+o	**Elenco dei dispositivi:**
 	
-o	Oscilloscopio Digitale Agilent DSO3102A  (Figura 1)
-o	Cavi coassiali (BNC-BNC)
-o	Cavi coassiali (BNC-banana)
-o	Cavi banana-banana
-o	Sonde compensate Agilent N2862A
-o	Resistenze
-o	Condensatori
-o	Piastra per montaggi sperimentale 
-o	Generatore di funzioni Agilent 33220A (Figura 3)
-o	Contatore asincrono
-o	Comparatore di soglia
-o	Schedina di LED con resistenza
+-	Oscilloscopio Digitale Agilent DSO3102A  (Figura 1)
+-	Cavi coassiali (BNC-BNC)
+-	Cavi coassiali (BNC-banana)
+-	Cavi banana-banana
+-	Sonde compensate Agilent N2862A
+-	Resistenze
+-	Condensatori
+-	Piastra per montaggi sperimentale 
+-	Generatore di funzioni Agilent 33220A (Figura 3)
+-	Contatore asincrono
+-	Comparatore di soglia
+-	Schedina di LED con resistenza
 
-
-•	**Scopo dell’esercitazione**
+o	**Scopo dell’esercitazione**
 
 Gli obiettivi dell’esercitazione sono stati, in primo luogo, di realizzare un generatore di onde quadre con porte logiche e poi di modificare il circuito in modo da variare il duty-cycle.
 Successivamente, dato un contatore asincrono, verificarne il comportamento e misurarne i ritardi. Infine si doveva decodificare uno stato di uscita e verificare la presenza di rimbalzo su contatti meccanici.
 
-•	**Cenni di teoria**
+o	**Cenni di teoria**
+
 Il generatore d'onda quadra è un circuito che fornisce in uscita un'onda quadra, senza che vi sia alcun segnale d'ingresso. E’ composto rete RC passa-basso, pilotata da un segnale binario, in cui la capacità C si carica e scarica attraverso la resistenza R verso il valore della tensione d’uscita in modo esponenziale, con costante di tempo τ = RC. Il confronto della tensione su C con il livello max e min avviene tramite un comparatore di isteresi. L’uscita può assumere solo due valori: : VoH e VoL , dette tensioni di saturazione, e la commutazione avviene quando la tensione sulla capacità uguaglia tali valori. Infine, l’uscita del compratore con isteresi, pilota la rete RC.       
  Sono previsti dei limiti operativi imposti dalla resistenza e dalla capacità: la resistenza, infatti, non può assumere valori troppo piccoli in quanto limiterebbe la dinamica di uscita, ma neanche troppo elevati perché deve permettere la circolazione di una corrente maggiore della corrente di ingresso del comparatore. La frequenza massima, infine, è anche limitata dallo slew rate dell’uscita. 
 Viene definito contatore un circuito logico che genera sulle uscite una sequenza di conteggio binario, incrementata ad ogni colpo di Clock. Viene poi definito “asincrono” in quanto le uscite commutano con ritardi differenti, poiché il clock comanda solo il primo dei flip-flop posti in cascata, mentre i successivi ricevono il segnale dal flip-flop precedente, andando quindi a generare un ritardo finale composto dalla somma dei singoli contributi.
  
-•	**DIARIO DELL’ESPERIENZA**
+o	**DIARIO DELL’ESPERIENZA**
 
-o	*PROGETTO DEL GENERATORE DI ONDA QUADRA E RISULTATI DELLE MISURE*
-
+-	*PROGETTO DEL GENERATORE DI ONDA QUADRA E RISULTATI DELLE MISURE*
 
 Per costruire il circuito abbiamo dovuto calcolare il valore del condensatore utilizzando le tensioni di soglia, prese dal datasheet (VT+ = 2,8 V e VT- = 1,9 V):
 
@@ -71,7 +55,7 @@ Abbiamo verificato che il duty-cycle variava regolando il potenziometro. (foto 5
 
 (foto 3)   (foto 4)   (circuito 2)
          
-o	*RISULTATI DELLE MISURE SUL CONTATORE ASINCRONO*
+-	*RISULTATI DELLE MISURE SUL CONTATORE ASINCRONO*
 
 Abbiamo costruito il circuito utilizzando la scheda per montaggi sperimentali già usata nel punto precedente e il contatore asincrono dato (figura 7 - 8)
 Successivamente abbiamo collegato al CH1 dell’oscilloscopio, l’uscita del trigger di Schmit, invece al CH2 l’uscita di uno dei bit del contatore, verificando quuindi che il periodo fosse multiplo intero di quello del segnale visualizzato sul CH1.  (figura 9) 
@@ -96,7 +80,7 @@ Su consiglio dell’assistente di laboratorio, abbiamo montato il decodificatore
 
 Purtroppo però non c’è stato tempo di compiere la verifica.
 
-•	**Commenti**
+o	**Commenti**
 
 Abbiamo incontrato alcune difficoltà 
 
