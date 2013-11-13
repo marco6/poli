@@ -1,5 +1,5 @@
-﻿### RELAZIONE DI LABORATORIO – MISURE ELETTRONICHE
-### ESERCITAZIONE 1 – USO DELL’OSCILLOSCOPIO DIGITALE
+### RELAZIONE DI LABORATORIO – MISURE ELETTRONICHE
+#### ESERCITAZIONE 1 – USO DELL’OSCILLOSCOPIO DIGITALE
 **(Giovedì 10 Ottobre 2013)**
 
 SQUADRA A06  – LED 9
@@ -22,30 +22,30 @@ Matricola:		180812
 
 (figura 1)    (figura 2)   (figura 3)
   
-•	**Elenco dei dispositivi:**
+o	**Elenco dei dispositivi:**
 	
-o	Oscilloscopio Digitale Agilent DSO3102A  (Figura 1)
-o	Multimetro digitale da banco Agilent 34401A (Figura 2)
-o	Cavi coassiali (BNC-BNC)
-o	Cavi coassiali (BNC-banana)
-o	Cavi banana-banana
-o	Sonde compensate Agilent N2862A
-o	Resistenze
-o	Scheda
-o	Piastra per montaggi sperimentale 
-o	Generatore di funzioni Agilent 33220A (Figura 3)
+-	Oscilloscopio Digitale Agilent DSO3102A  (Figura 1)
+-	Multimetro digitale da banco Agilent 34401A (Figura 2)
+-       Cavi coassiali (BNC-BNC)
+-	Cavi coassiali (BNC-banana)
+-	Cavi banana-banana
+-	Sonde compensate Agilent N2862A
+-	Resistenze
+-	Scheda
+-	Piastra per montaggi sperimentale 
+-	Generatore di funzioni Agilent 33220A (Figura 3)
 
-•	**Scopo dell’esercitazione**
+o	**Scopo dell’esercitazione**
 
 Utilizzo dello strumento per:
 
-o	Misurazione di valore efficace 
-o	Misurazione della frequenza
-o	Misurazione del tempo di salita
-o	Verifica dell’aliasing
-o	Rilevazione sincrona dei segnali
+-	Misurazione di valore efficace 
+-	Misurazione della frequenza
+-	Misurazione del tempo di salita
+-	Verifica dell’aliasing
+-	Rilevazione sincrona dei segnali
 
-•	**Cenni di teoria**
+o	**Cenni di teoria**
 
 L’oscilloscopio numerico, che è chiamato comunemente oscilloscopio digitale, è uno strumento che sta gradualmente sostituendo l’oscilloscopio analogico, sia per l’evoluzione verso la strumentazione numerica, sia per il fatto che è in grado di rappresentare segnali non ripetitivi, quali transistori, impulsi casuali e forme d’onda. 
 L’oscilloscopio digitale, pur mantenendo le principali funzionalità di un oscilloscopio analogico, opera in modo sostanzialmente diverso da questo, in quanto: campiona il segnale e lo quantizza tramite un convertitore A\D, quindi memorizza i campioni numerici in una memoria RAM, li elabora e rappresenta infine il segnale su uno schermo di un tubo a raggi catodici. Ne consegue quindi che i circuiti che precedono il convertitore devono avere banda passante adeguata a quella del segnale. Inoltre la memorizzazione dei campioni numerici deve avvenire alla stessa velocità con cui si esegue la scansione. Dopodichè il vincolo della velocità viene meno, in quanto la porzione temporale viene memorizzata in una RAM che può essere letta ciclicamente. La gestione delle varie operazioni  è affidata ad uno o più microprocessori, che controllano le diverse funzioni, quali il campionamento, il trigger, l’elaborazione dei dati memorizzati e la presentazione sullo schermo. 
@@ -53,19 +53,19 @@ Una particolarità degli oscilloscopi digitali è la possibilità di operare il 
 Tra le principali differenze da segnalare rispetto all’oscilloscopio analogico c’è, oltre la possibilità di catturare transitori, anche la notevole flessibilità dell’impostazione del trigger (permette infatti di determinare l’inizio e\o la fine della fase di acquisizione). 
 Negli ultimi anni ci si sta dirigendo verso convertitori A\D e memorie sempre più veloci, per cui si sta assistendo ad un’evoluzione deli oscilloscopi digitali verso le alte frequenze, mentre lo sviluppo di hardware e software sempre più sofisticati permette di ottenere migliori prestazioni. 
 
-•	**DIARIO DELL’ESPERIENZA**
+o	**DIARIO DELL’ESPERIENZA**
 
 Come prima cosa abbiamo generato un segnale sinusoidale (di frequenza 1 kHz e ampiezza 1 V senza offset) attraverso il generatore di funzioni e, tramite un cavo coassiale, lo abbiamo poi collegato all’oscilloscopio digitale all’ingresso CH1 (500 μs/div), per visualizzarne l’andamento.
 Ci siamo quindi apprestati ad effettuare le misurazioni richieste.
 
-o	*VALORE EFFICACE*
+-	*VALORE EFFICACE*
 
 Inizialmente abbiamo visualizzato un segnale “sospetto” di ampiezza picco-picco 1V , quando invece ci aspettavamo esattamente il doppio; dopo varie verifiche, utilizzando l’oscilloscopio e constatando che veniva visualizato un risultato corretto da quest’ultimo, abbiamo capito che questo problema era dovuto al fatto che il generatore di funzioni era impostato per funzionare con un oscilloscopio ad alta impedenza (da 1 MΩ) quando noi ci aspettavamo che fosse impostato per 50Ω. Così, dopo qualche perplessità, siamo riusciti a risolvere il problema modificando le caratteristiche di uscita del generatore nel modo corretto. 
 Abbiamo quindi letto la misura dell’ampiezza picco-picco, utilizzando i cursori che ci hanno direttamente dato il valore  di 2,021V.
 Leggendo dal manuale abbiamo constatato che l’incertezza dell’oscilloscopio è il 3% di fondo scala,  quindi nel nostro caso è pari a ± 0.090 V
 Il valore efficace ci risulta quindi: 0.714 ± 0.031
 
-o	*FREQUENZA*
+-	*FREQUENZA*
 
 Abbiamo agito in modo analogo alla precedente richiesta, ottenendo i seguenti valori: 
 Periodo: 1 ms ± 0.0001 ms,  utilizzando la formula per l’errore: ± 100 ppm.
@@ -75,7 +75,7 @@ La formula per l’errore del multimetro letta dal manuale è: ± (0.06% (of rea
 Valore efficace: 0.70592 ± 0.00046 V
 Frequenza: 999.96 ± 0.09 Hz  (errore = 0.01 %(of reading))   
 
-o	*TEMPO DI SALITA*
+-	*TEMPO DI SALITA*
 
 Dalla teoria è noto che viene definito “tempo di salita”, il tempo che il segnale impiega per passare dal livello 10% al livello 90%.
 Per ricavare il suddetto tempo nella nostra esperienza abbiamo generato un segnale ad onda quadra (di frequenza 1 kHz e ampiezza 1 V senza offset) attraverso il generatore di funzioni e, tramite un cavo coassiale, lo abbiamo poi collegato all’oscilloscopio digitale per visualizzarne il fronte di salita (10 ns/div).
@@ -112,7 +112,7 @@ Infine, abbiamo verificato sperimentalmente l’effetto della sonda   dopo averl
 Infine, abbiamo verificato sperimentalmente l’effetto della sonda dopo averla compensata: 28.55 ns.
 Benché anche dopo l’immissione della sonda il ts atteso dista da quello trovato sperimentalmente di 34.65ns, l’esperienza si può considerare riuscita in quanto la differenza tra i due tempi nel secondo caso (con sonda) è molto diminuita rispetto al primo (senza sonda).
  
-o	*ALIASING*
+-	*ALIASING*
 
 Abbiamo generato un segnale sinusoidale (di frequenza 100 kHz e ampiezza 1 V senza offset) attraverso il generatore di funzioni e tramite un cavo coassiale, lo abbiamo poi collegato all’oscilloscopio digitale per visualizzarne l’andamento (2 μs/div).
 Secondo il teorema di campionamento, la minima frequenza risulta essere: 200 kHz,
@@ -125,7 +125,7 @@ In conclusione, abbiamo verificato i casi visti a lezione: in un primo caso, qua
 Successivamente per verificare l’aliasing nel dominio del tempo, abbiamo lasciato l’oscilloscopio impostato come nel punto precedente, fissato la frequenza del generatore a Fs = 100.1 kHz e ridotto la velocità di scansione fino ad avere una frequenza di campionamento di 100 kHz. In queste condizioni la frequenza del segnale osservato è risultata essere 98.14 Hz. Comportamento che è giustificabile dal fatto che non si è rispettato il teorema di Shannon, ovvero la relazione Fev > 2Fs (Fev=Nd/Tx) non è stata soddisfatta ed inoltre il rapporto Fs/Fev risulta non razionale.
 Andando a modificare la frequenza del generatore a 100kHz, il teorema di Shannon continua a non essere verificato, ma il rapporto risulta invece essere razionale: ciò giustifica il fatto che, vedendo il segnale, non si ha alcuna sensazione dell’errore: si ottengono infatti sia la forma d’onda che l’ampiezza prevista, ma si rileva una frequenza notevolemente differente dalle aspettative.
 
-o	*RILEVAZIONE SINCRONA DEI SEGNALI*
+-	*RILEVAZIONE SINCRONA DEI SEGNALI*
 
 
 Seguendo lo schema in figura 4, abbiamo realizzato il circuito con la piastra per montaggi sperimentali, collegando due resistenze da 680Ω (già presenti in laboratorio) e utilizzando per la resistenza da 47Ω, 2 resistenze da 100Ω e una da 800Ω (100Ω//100Ω//800Ω = ~47Ω).
@@ -138,7 +138,7 @@ Utilizzando però la funzione “media” dell’oscilloscopio digitale e aument
 
 (foto 3)  (foto 4)  (foto 5)
        
-•	Commenti
+o	**Commenti**
 
 Rispetto all’esercitazione di laboratorio dell’anno scorso effettuata con l’oscilloscopio analogico, abbiamo notato che utilizzando invece un oscilloscopio digitale si è potuto effettuare direttamente alcune misurazioni che invece con lo strumento analogico dovevano essere effettuate in modo alternativo (per esempio il calcolo del valore picco-picco di un segnale si poteva comodamente leggere sullo schermo del digitale utilizzando l’apposita funzione); inoltre si possono anche distinguere più chiaramente tracce di segnali diversi pur essendo esse sovrapposte, grazie alla distinzione dei colori che questo strumento permette.
 Come già detto in precedenza, abbiamo incontrato qualche iniziale difficoltà (illustrata nel primo punto “valore efficace”) ed a causa di questo, abbiamo accumulato un po’ di ritardo che ci ha fatto risolvere un po’ frettolosamente l’ultima richiesta; nonostante ciò, siamo fortunatamente riusciti a concludere l’esperienza.
