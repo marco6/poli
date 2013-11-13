@@ -4,22 +4,6 @@
 
 SQUADRA A06  – LED 9
 
-Nome:		 BONATO Alessio		____________________________
-
-Matricola:		180472
-
-Nome:		 DI BIASE Armonia	____________________________
-
-Matricola:		181325
-
-Nome: 		 MANINO Marco		____________________________
-
-Matricola:		180678
-
-Nome:	  	 MANTOVANI Alessia	____________________________
-
-Matricola:		180812
-
 (figura 1)    (figura 2)   (figura 3)
   
 o	**Elenco dei dispositivi:**
