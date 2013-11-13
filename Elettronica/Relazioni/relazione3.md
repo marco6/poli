@@ -70,7 +70,7 @@ Collegando una resistenza di circa 50 Ohm (49,8 Ohm), ottenuta mettendo due resi
 Per svolgere le richieste abbiamo collegato in serie al generatore una resistenza Rs = 220 Ohm e lasciato l'altro capo aperto.
 Abbiamo quindi calcolato il valore atteso dell'indice di riflessione 
 
-(formula 3) Teta_g = (R0+Rs-Z0)/(R0+Rs+Z0) = 0,68 circa 
+![alt text](http://www.sciweavers.org/tex2img.php?eq=%5CGamma_g%20%3D%20%5Cfrac%7BR_0%2BR_s-Z_0%7D%7BR_0%2BR_s%2BZ_0%7D%20%20%20%5Capprox%20%200%2C68%20&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0 "Formula 3")
 
 (circuito 3): ![alt text](../Schemi/Lab3/circuito_3.png "f")
 
