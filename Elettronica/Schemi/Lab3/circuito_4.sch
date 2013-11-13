@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date ven 08 nov 2013 11:27:47 CET
+EESchema Schematic File Version 2  date mer 13 nov 2013 10:59:08 CET
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -36,7 +36,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "8 nov 2013"
+Date "13 nov 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -44,27 +44,54 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Connection ~ 6550 4350
+Connection ~ 5900 3900
+Connection ~ 6300 3900
+Connection ~ 6100 4350
 Wire Wire Line
-	6100 4350 7450 4350
-Wire Wire Line
-	6550 4350 6550 4100
-Wire Wire Line
-	5200 3900 5200 4050
-Connection ~ 7000 4350
-Wire Wire Line
-	7450 4350 7450 4100
+	5900 4350 7450 4350
 Wire Wire Line
 	5650 3900 6350 3900
+Wire Wire Line
+	7450 4350 7450 4100
+Connection ~ 7000 4350
+Wire Wire Line
+	5200 3900 5200 4050
+Wire Wire Line
+	6550 4350 6550 4100
+Connection ~ 6550 4350
+Connection ~ 6300 4350
+Connection ~ 6100 3900
 $Comp
-L RESISTORE 33
-U 1 1 527CB9E3
+L RESISTORE 100
+U 1 1 52834D2D
 P 6100 4150
-F 0 "33 Ohm" V 6000 4150 60  0000 C CNN
-F 1 "Rs" V 6225 4150 60  0000 C CNN
+F 0 "100 Ohm" V 6000 4150 50  0000 C CNN
+F 1 "RESISTORE" H 6100 4200 60  0001 C CNN
 F 2 "~" H 6100 4200 60  0000 C CNN
 F 3 "~" H 6100 4200 60  0000 C CNN
 	1    6100 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L RESISTORE 100
+U 1 1 52834CE3
+P 6300 4150
+F 0 "100 Ohm" V 6200 4150 50  0000 C CNN
+F 1 "RESISTORE" H 6300 4200 60  0001 C CNN
+F 2 "~" H 6300 4200 60  0000 C CNN
+F 3 "~" H 6300 4200 60  0000 C CNN
+	1    6300 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L RESISTORE 100
+U 1 1 52834CDB
+P 5900 4150
+F 0 "100 Ohm" V 5800 4150 50  0000 C CNN
+F 1 "RESISTORE" H 5900 4200 60  0001 C CNN
+F 2 "~" H 5900 4200 60  0000 C CNN
+F 3 "~" H 5900 4200 60  0000 C CNN
+	1    5900 4150
 	1    0    0    -1  
 $EndComp
 Text Notes 6300 3850 0    60   ~ 0
