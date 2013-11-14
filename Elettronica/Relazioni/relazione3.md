@@ -77,7 +77,7 @@ Abbiamo quindi calcolato il valore atteso dell'indice di riflessione
 
 con R0 = 44,514 Ohm
 
-(circuito 3): ![alt text](../Schemi/Lab3/circuito_3.png "f")
+![alt text](../Schemi/Lab3/circuito_3.png "f")
 
 (grafico 1)
 
@@ -105,7 +105,7 @@ Per ottenere il coefficiente di riflessione reale, abbiamo sfruttato la stessa f
 
 Abbiamo montato il circuito ponendo un condensatore da 1 nF all'estremo remoto della matassa
 
-(circuito 5)
+![alt text](../Schemi/Lab3/circuito_5.png "f")
 
 Quello che abbiamo constatato è stato che Vb rimaneva stabile per due tempi di propagazione prima di azzerarsi per un istante a causa dell'indice di rifrazione negativo dato dal fatto che il condensatore all'istante iniziale è scarico, di conseguenza si comporta come un corto circuito. Da lì in poi il condensatore inizia a caricarsi fino a che, dopo essersi caricato completamente, non si comporta come un circuito aperto. Questo comportamento è esattamente speculare durante la discesa.
 
@@ -114,7 +114,9 @@ Quello che abbiamo constatato è stato che Vb rimaneva stabile per due tempi di 
 - *E) RIFLETTOMETRIA NEL DOMINIO DEL TEMPO:*
 
 Per questo punto serviva avere a disposizione due matasse di filo distinte: non essendocene però a sufficienza, l'assistente di laboratorio ci ha consigliato di svolgere quest'esperienza insieme ad un altro gruppo. La matassa in possesso di quest'ultimo era più corta della nostra (circa 14m contro i circa 18m della nostra).
-Abbiamo quindi collegato il canale 1 dell'oscilloscopio all'estremo vicino della prima matassa e il canale due all'estremo remoto della stessa, a cui era anche collegata la seconda matassa (circuito).
+Abbiamo quindi collegato il canale 1 dell'oscilloscopio all'estremo vicino della prima matassa e il canale due all'estremo remoto della stessa, a cui era anche collegata la seconda matassa.
+
+![alt text](../Schemi/Lab3/circuito_6.png "f")
 
 Abbiamo dunque osservato sull'oscilloscopio che il gradino sul canale 1 (cioè su Vb) durava 276 ns, mentre quello sul canale 2 (Vc) durava 115 ns.  
 
@@ -129,14 +131,12 @@ Ora, dividendo il ritardo dovuto ad ognuna delle matasse a metà, si può ricava
 
 con c = 300 000 000 m/s
 
-
-
-
-
 - *F) LINEA PILOTATA DA CIRCUITI LOGICI:*
 
 Per questa richiesta, come prima cosa, abbiamo iniziato con il prendere i vari componenti digitali necessari (74LS00, 74HC00, 74AC04).
 Abbiamo acceso l'alimentatore, settato il voltaggio di uscita a 5 V e controllato tale valore con il multimetro per sicurezza. Abbiamo quindi collegato il piedino di ground al riferimento del generatore e l'uscita dell'alimentazione al piedino Vcc. Dopodichè per testarne il funzionamento, abbiamo applicato all'ingresso dell'integrato la stessa onda quadra utilizzata durante tutta l'esperienza (Vpp = 4 V, f = 200 kHz e duty-cycle 50%) ed all'uscita la sonda dell'oscilloscopio.
+
+![alt text](../Schemi/Lab3/circuito_6.png "f")
 
 (foto 6)
 
@@ -144,9 +144,9 @@ Tuttavia il risultato visualizzato sullo schermo dell'oscilloscopio non era quel
 
 o **Commenti**
 
-L’esperienza di laboratorio è stata portata a termine, non senza difficoltà. Abbiamo riscontrato, infatti, alcuni problemi già nel momento del calcolo dei parametri del cavo: cercando, purtroppo in modo invano, di calcolare la lunghezza della matassa tramite la misura del ritardo di un pezzo di cavo coassiale preso a campione, abbiamo sprecato diversi minuti, il che non ci ha permesso di affrontare gli ultimi punti facoltativi del laboratorio. Non siamo riusciti a fare ciò, probabilmente a causa della risoluzione troppo bassa dello strumento a nostra disposizione oppure poiché ci siamo serviti di un cavo eccessivamente corto. Tuttavia siamo riusciti a superare il problema, come descritto in dettaglio nel diario dell’esperienza.  Inoltre…. 
-Tuttavia, i risultati trovati sono stati per lo più coerenti con le aspettative, dunque possiamo ritenerci piuttosto soddisfatti del lavoro svolto. 
-
+L’esperienza di laboratorio è stata portata a termine, non senza difficoltà. Abbiamo riscontrato, infatti, alcuni problemi già nel momento del calcolo dei parametri del cavo: cercando, purtroppo invano, di calcolare la lunghezza della matassa tramite la misura del ritardo di un pezzo di cavo coassiale preso a campione, abbiamo perso diversi minuti. Non siamo riusciti a fare ciò, probabilmente a causa della risoluzione troppo bassa dello strumento a nostra disposizione oppure poiché ci siamo serviti di un cavo eccessivamente corto. Tuttavia siamo riusciti a superare il problema, come descritto in dettaglio nel diario dell’esperienza.  
+Abbiamo incontrato ulteriori problemi svolgendo il punto F, in quanto, pur avendo costruito il circuito correttamente, non visualizzavamo sull'oscilloscopio la forma d'onda desiderata. Grazie all'aiuto degli assistenti abbiamo capito che si trattava solamente di modificare le impostazioni del generatore di segnali; siamo riusciti quindi, in chiusura, a visualizzare il segnale atteso. Purtroppo, l'accumulo di ritardi non ci ha permesso di elaborare l'ultimo risultato e proseguire con gli altri punti facoltativi.
+Nonostante ciò, i dati raccolti sono stati coerenti con le aspettative, dunque possiamo ritenerci piuttosto soddisfatti del lavoro svolto.
 
 
 
