@@ -117,6 +117,13 @@ Quello che abbiamo constatato è stato che Vb rimaneva stabile per due tempi di 
 
 - *F) LINEA PILOTATA DA CIRCUITI LOGICI:*
 
+Per questa richiesta, come prima cosa, abbiamo iniziato con il prendere i vari componenti digitali necessari (74LS00, 74HC00, 74AC04).
+Abbiamo acceso l'alimentatore, settato il voltaggio di uscita a 5 V e controllato tale valore con il multimetro per sicurezza. Abbiamo quindi collegato il piedino di ground al riferimento del generatore e l'uscita dell'alimentazione al piedino Vcc. Dopodichè per testarne il funzionamento, abbiamo applicato all'ingresso dell'integrato la stessa onda quadra utilizzata durante tutta l'esperienza (Vpp = 4 V, f = 200 kHz e duty-cycle 50%) ed all'uscita la sonda dell'oscilloscopio.
+
+(foto 6)
+
+Tuttavia il risultato visualizzato sullo schermo dell'oscilloscopio non era quello che ci aspettavamo; ovvero la forma d'onda era simile ad un rumore con dei brevi picchi ad una certa frequenza, la quale non sembrava correlata alla frequenza dell'onda quadra (modificandola, non si notava nessun cambiamento). Abbiamo quindi chiesto consiglio all'assistente, che modificando delle impostazioni nel generatore di segnali è riuscito a far funzionare il componente. Purtroppo però, a causa di mancanza di tempo, non siamo riusciti fare altro.
+
 o **Commenti**
 
 L’esperienza di laboratorio è stata portata a termine, non senza difficoltà. Abbiamo riscontrato, infatti, alcuni problemi già nel momento del calcolo dei parametri del cavo: cercando, purtroppo in modo invano, di calcolare la lunghezza della matassa tramite la misura del ritardo di un pezzo di cavo coassiale preso a campione, abbiamo sprecato diversi minuti, il che non ci ha permesso di affrontare gli ultimi punti facoltativi del laboratorio. Non siamo riusciti a fare ciò, probabilmente a causa della risoluzione troppo bassa dello strumento a nostra disposizione oppure poiché ci siamo serviti di un cavo eccessivamente corto. Tuttavia siamo riusciti a superare il problema, come descritto in dettaglio nel diario dell’esperienza.  Inoltre…. 
