@@ -30,7 +30,8 @@ o **Scopo dell'esercitazione:**
 
 o **Cenni teorici**
 
-
+Il cavo coassiale è un esempio di linea di trasmissione senza perdite utilizzato per trasferire segnali elettrici. In particolare viene utilizzato in tutte le applicazioni in cui un segnale in alta frequenza deve essere connesso da un punto di una rete ad un altro. In questo caso la lunghezza del filo non è più trascurabile, infatti il rapporto della lunghezza sulla lunghezza d’onda è circa uguale ad uno: parleremo dunque di parametri distribuiti.                                                                                                                                                                           I parametri che caratterizzano una linea di trasmissione sono infatti un’impedenza caratteristica ed una velocità propagazione, i quali dipendono dall’induttanza e dalla capacità, che a loro volta sono funzione delle caratteristiche fisiche quali le dimensioni e il dielettrico. Infine, come ulteriore parametro, vi è il tempo di propagazione, dato dal rapporto tra la lunghezza del cavo e la velocità di propagazione all’interno di esso: identifica quindi il tempo impiegato dal segnale elettrico per spostarsi sul conduttore.                                                                                                            Per pilotare la linea di può andare ad applicare un gradino: si genererà quindi un’onda progressiva dal generatore verso il carico e, qualora siano presenti discontinuità del condensatore o carichi, le variazioni di tensioni e corrente generano anche un’onda riflessa, che si propaga nel verso opposto dell’onda incidente. La frazione di segnale incidente che viene riflessa in verso opposto dalla terminazione della linea è detto coefficiente di riflessione ed indicato con la lettera Γ. Per evitare questo tipo di riflessioni si lavora in condizione di adattamento, ovvero la linea viene chiusa sulla propria impedenza caratteristica: in questo modo, ai fini della propagazione, non si ha alcuna discontinuità ed è come se il segnale continuasse a propagarsi oltre la terminazione. La tensione totale sulla linea sarà quindi data dalla somma, punto per punto, dell’onda incidente e di quella riflessa.                                                                                                             Nei casi reali, sulla linea sono connessi almeno un driver, alcuni ricevitori ed in genere una terminazione. I ricevitori vanno ad introdurre un carico che porta ad un disadattamento rispetto all’impedenza caratteristica, il che causa ulteriori riflessioni. Dunque, al fine di evitare di abbassare eccessivamente l’impedenza caratteristica, occorre limitare il numero di elementi collegati alla linea. 
+È definita diafonia, infine, il mutuo accoppiamento induttivo, capacitivo e resistivo che determina un  trasferimento di segnali dalle linee attive a quelle a riposo: ciò può causare errori nel trasferimento delle informazioni. 
 
 o **DIARIO DELL'ESPERIENZA**
 
@@ -87,6 +88,10 @@ Il valore ricavato risultava essere 0,62, calcolato dopo aver appreso dall'oscil
 
 - *F) LINEA PILOTATA DA CIRCUITI LOGICI:*
 
+o **COMMENTI**
+
+L’esperienza di laboratorio è stata portata a termine, non senza difficoltà. Abbiamo riscontrato, infatti, alcuni problemi già nel momento del calcolo dei parametri del cavo: cercando, purtroppo in modo invano, di calcolare la lunghezza della matassa tramite la misura del ritardo di un pezzo di cavo coassiale preso a campione, abbiamo sprecato diversi minuti, il che non ci ha permesso di affrontare gli ultimi punti facoltativi del laboratorio. Non siamo riusciti a fare ciò, probabilmente a causa della risoluzione troppo bassa dello strumento a nostra disposizione oppure poiché ci siamo serviti di un cavo eccessivamente corto. Tuttavia siamo riusciti a superare il problema, come descritto in dettaglio nel diario dell’esperienza.  Inoltre…. 
+Tuttavia, i risultati trovati sono stati per lo più coerenti con le aspettative, dunque possiamo ritenerci piuttosto soddisfatti del lavoro svolto. 
 
 
 
