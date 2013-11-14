@@ -43,7 +43,7 @@ Come prima cosa abbiamo impostato il generatore di segnali in modo che producess
 
 Dopochè con il multimetro abbiamo misurato la resistenza interna del generatore, attaccando una resistenza da 100 Ohm in serie al generatore e misurando il voltaggio su di essa; il valore ottenuto è stato Vb = 2,73 V che abbiamo utilizzato per calcolare R0.
 
-(formula 1)    R0 = Rl(Val-Vb)/Vb = 44,514 Ohm
+![](../Equazioni/3/Eq1.png "")
 
 - *B) MISURA DEI PARAMETRI DEL CAVO:*
 
@@ -58,7 +58,7 @@ Successivamente abbiamo collegato questa matassa al generatore di onda quadra ed
 
 Il tempo in cui Vb si stabilizza è pari al quello in cui l'onda percorre due volte il filo (onda riflessa), ovvero circa 160 ns, da quì la velocità di propagazione è risultata essere: 
 
-(formula 2)    U = l/t = 0,78 c
+![](../Equazioni/3/Eq2.png "")
 
 Coerentemente al valore dato: 0,7 c.
 
@@ -73,7 +73,7 @@ Collegando una resistenza di circa 50 Ohm (49,8 Ohm), ottenuta mettendo due resi
 Per svolgere le richieste abbiamo collegato in serie al generatore una resistenza Rs = 220 Ohm e lasciato l'altro capo aperto.
 Abbiamo quindi calcolato il valore atteso dell'indice di riflessione 
 
-(formula 3) Gamma_g = (R0+Rs-Z0)/(R0+Rs+Z0) = 0,68 circa 
+![](../Equazioni/3/Eq3.png "")
 
 (circuito 3): ![alt text](../Schemi/Lab3/circuito_3.png "f")
 
@@ -81,7 +81,7 @@ Abbiamo quindi calcolato il valore atteso dell'indice di riflessione
 
 Il valore ricavato risultava essere 0,62, calcolato dopo aver appreso dall'oscilloscopio il valore in B iniziale e il valore in B dopo 2 tempi di propagazione e tenendo conto della riflessione totale dal lato remoto abbiamo usato la formula:
 
-(formula 4)   Teta_g = (Vb2/Vb0)-2 = (168/64)-2 = 0,62
+![](../Equazioni/3/Eq4.png "")
 
 Dopodichè abbiamo ripetuto la misura montando una resistenza da circa 33 Ohm (costruita con tre resistenze da 100 Ohm in parallelo). Questo ci ha permesso di verificare il fenomeno richiesto dall'esperienza anche se quest'ultima richiedeva una resistenza da 22 Ohm, in quanto, come ci hanno fatto notare gli assistenti di laboratorio, l'importante era avere un indice di riflessione negativo ed è quello che abbiamo verificato anche se con la resistenza diversa da quella data.
 
@@ -89,7 +89,7 @@ Dopodichè abbiamo ripetuto la misura montando una resistenza da circa 33 Ohm (c
 
 Con il multimetro abbiamo verificato l'effettivo valore delle tre resistenze in parallelo (circa 33,17 Ohm) e quindi calcolato l'indice di riflessione:
 
-(formula 5)  Gamma_g = (R0||Rs-Z0)/(R0||Rs+Z0) = con R0 = 44,514 Ohm
+![](../Equazioni/3/Eq5.png "")
 
 Il risultato è il diagramma a traliccio seguente:
 
@@ -97,7 +97,7 @@ Il risultato è il diagramma a traliccio seguente:
 
 Per ottenere il coefficiente di riflessione reale, abbiamo sfruttato la stessa formula del punto precedente:
 
-(formula 4)   Teta_g = (Vb2/Vb0)-2 = (180/120)-2 = -0,5
+![](../Equazioni/3/Eq6.png "")
 
 - *D) EFFETTI DEL CARICO CAPACITIVO:*
 
@@ -119,8 +119,9 @@ Abbiamo dunque osservato sull'oscilloscopio che il gradino sul canale 1 (cioè s
 Questo risultato è coerente con le aspettative, poichè, se si sottrae al primo ritardo il secondo, si trova il ritardo dovuto solo alla prima matassa: 276-115 = 161 ns.
 Ora, dividendo il ritardo dovuto ad ognuna delle matasse a metà, si può ricavare la lunghezza approssimata dei due fili, sapendo che la velocità del segnale nel filo è di 0,78c (come avevamo trovato nel punto B):
 
-L1 = 0,78c * 161/2 = 18,837 m
-L2 = 0,78c * 115/2 = 13,455 m
+![](../Equazioni/3/Eq7.png "")
+
+![](../Equazioni/3/Eq8.png "")
 
 con c = 300 000 000 m/s
 
