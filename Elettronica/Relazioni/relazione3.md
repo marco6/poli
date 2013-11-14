@@ -54,7 +54,7 @@ Successivamente abbiamo collegato questa matassa al generatore di onda quadra ed
 
 (foto 1) 
 
-(circuito 1): ![alt text](../Schemi/Lab3/circuito_1.png "f")
+![alt text](../Schemi/Lab3/circuito_1.png "f")
 
 Il tempo in cui Vb si stabilizza è pari al quello in cui l'onda percorre due volte il filo (onda riflessa), ovvero circa 160 ns, da quì la velocità di propagazione è risultata essere: 
 
@@ -66,7 +66,7 @@ Collegando una resistenza di circa 50 Ohm (49,8 Ohm), ottenuta mettendo due resi
 
 (foto 3) 
 
-(circuito 2): ![alt text](../Schemi/Lab3/circuito_2.png "f")
+![alt text](../Schemi/Lab3/circuito_2.png "f")
 
 - *C) EFFETTI DEL DISADATTAMENTO LATO GENERATORE E LATO REMOTO:*
 
@@ -74,6 +74,8 @@ Per svolgere le richieste abbiamo collegato in serie al generatore una resistenz
 Abbiamo quindi calcolato il valore atteso dell'indice di riflessione 
 
 ![](../Equazioni/3/Eq3.png "")
+
+con R0 = 44,514 Ohm
 
 (circuito 3): ![alt text](../Schemi/Lab3/circuito_3.png "f")
 
@@ -111,10 +113,12 @@ Quello che abbiamo constatato è stato che Vb rimaneva stabile per due tempi di 
 
 - *E) RIFLETTOMETRIA NEL DOMINIO DEL TEMPO:*
 
-Per questo punto serviva avere a disposizione due matasse di filo distinte: non essendocene però a sufficienza, l'assistente di laboratorio ci ha consigliato di svolgere quest'esperienza insieme ad un altro gruppo. La matassa in possesso di quest'ultimo era più corta della nostra: ~14m contro i ~18m della nostra.
+Per questo punto serviva avere a disposizione due matasse di filo distinte: non essendocene però a sufficienza, l'assistente di laboratorio ci ha consigliato di svolgere quest'esperienza insieme ad un altro gruppo. La matassa in possesso di quest'ultimo era più corta della nostra (circa 14m contro i circa 18m della nostra).
 Abbiamo quindi collegato il canale 1 dell'oscilloscopio all'estremo vicino della prima matassa e il canale due all'estremo remoto della stessa, a cui era anche collegata la seconda matassa (circuito).
 
-Abbiamo dunque osservato sull'oscilloscopio che il gradino sul canale 1 (cioè su Vb) durava 276 ns, mentre quello sul canale 2 (Vc) durava 115 ns.  (foto)
+Abbiamo dunque osservato sull'oscilloscopio che il gradino sul canale 1 (cioè su Vb) durava 276 ns, mentre quello sul canale 2 (Vc) durava 115 ns.  
+
+(foto)
 
 Questo risultato è coerente con le aspettative, poichè, se si sottrae al primo ritardo il secondo, si trova il ritardo dovuto solo alla prima matassa: 276-115 = 161 ns.
 Ora, dividendo il ritardo dovuto ad ognuna delle matasse a metà, si può ricavare la lunghezza approssimata dei due fili, sapendo che la velocità del segnale nel filo è di 0,78c (come avevamo trovato nel punto B):
