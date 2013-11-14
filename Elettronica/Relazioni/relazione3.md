@@ -1,4 +1,4 @@
-### RELAZIONE DI LABORATORIO – ELETTRONICA
+﻿### RELAZIONE DI LABORATORIO – ELETTRONICA
 #### ESERCITAZIONE 3 – INTERCONNESIONI E LINEE DI TRASMISSIONE 
 **(Giovedì 7 Novembre 2013)**
 
@@ -54,7 +54,7 @@ Successivamente abbiamo collegato questa matassa al generatore di onda quadra ed
 
 (circuito 1): ![alt text](../Schemi/Lab3/circuito_1.png "f")
 
-Il tempo in cui Vb si stabilizza è pari al quello in cui l'onda percorre due volte il filo (onda riflessa), ovvero circa 160 ns, da quì la velocità di propagazione è risulta essere: 
+Il tempo in cui Vb si stabilizza è pari al quello in cui l'onda percorre due volte il filo (onda riflessa), ovvero circa 160 ns, da quì la velocità di propagazione è risultata essere: 
 
 (formula 2)    U = l/t = 0,78 c
 
@@ -71,7 +71,7 @@ Collegando una resistenza di circa 50 Ohm (49,8 Ohm), ottenuta mettendo due resi
 Per svolgere le richieste abbiamo collegato in serie al generatore una resistenza Rs = 220 Ohm e lasciato l'altro capo aperto.
 Abbiamo quindi calcolato il valore atteso dell'indice di riflessione 
 
-![alt text](http://www.sciweavers.org/tex2img.php?eq=%5CGamma_g%20%3D%20%5Cfrac%7BR_0%2BR_s-Z_0%7D%7BR_0%2BR_s%2BZ_0%7D%20%20%20%5Capprox%20%200%2C68%20&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0 "Formula 3")
+(formula 3) Gamma_g = (R0+Rs-Z0)/(R0+Rs+Z0) = 0,68 circa 
 
 (circuito 3): ![alt text](../Schemi/Lab3/circuito_3.png "f")
 
@@ -79,16 +79,45 @@ Abbiamo quindi calcolato il valore atteso dell'indice di riflessione
 
 Il valore ricavato risultava essere 0,62, calcolato dopo aver appreso dall'oscilloscopio il valore in B iniziale e il valore in B dopo 2 tempi di propagazione e tenendo conto della riflessione totale dal lato remoto abbiamo usato la formula:
 
-(formula 3)   Teta_g = (Vb2/Vb0)-2 = 0,62
+(formula 4)   Teta_g = (Vb2/Vb0)-2 = (168/64)-2 = 0,62
 
+Dopodichè abbiamo ripetuto la misura montando una resistenza da circa 33 Ohm (costruita con tre resistenze da 100 Ohm in parallelo). Questo ci ha permesso di verificare il fenomeno richiesto dall'esperienza anche se quest'ultima richiedeva una resistenza da 22 Ohm, in quanto, come ci hanno fatto notare gli assistenti di laboratorio, l'importante era avere un indice di riflessione negativo ed è quello che abbiamo verificato anche se con la resistenza diversa da quella data.
+
+(circuito 4)
+
+Con il multimetro abbiamo verificato l'effettivo valore delle tre resistenze in parallelo (circa 33,17 Ohm) e quindi calcolato l'indice di riflessione:
+
+(formula 5)  Gamma_g = (R0||Rs-Z0)/(R0||Rs+Z0) = con R0 = 44,514 Ohm
+
+Il risultato è il diagramma a traliccio seguente:
+
+(foto 4)
+
+Per ottenere il coefficiente di riflessione reale, abbiamo sfruttato la stessa formula del punto precedente:
+
+(formula 4)   Teta_g = (Vb2/Vb0)-2 = (180/120)-2 = -0,5
 
 - *D) EFFETTI DEL CARICO CAPACITIVO:*
 
+Abbiamo montato il circuito ponendo un condensatore da 1 nF all'estremo remoto della matassa
+
+(circuito 5)
+
+Quello che abbiamo constatato è stato che Vb rimaneva stabile per due tempi di propagazione prima di azzerarsi per un istante a causa dell'indice di rifrazione negativo dato dal fatto che il condensatore all'istante iniziale è scarico, di conseguenza si comporta come un corto circuito. Da lì in poi il condensatore inizia a caricarsi fino a che, dopo essersi caricato completamente, non si comporta come un circuito aperto. Questo comportamento è esattamente speculare durante la discesa.
+
+(foto 5)
+
 - *E) RIFLETTOMETRIA NEL DOMINIO DEL TEMPO:*
+
+
+
+
+
+
 
 - *F) LINEA PILOTATA DA CIRCUITI LOGICI:*
 
-o **COMMENTI**
+o **Commenti**
 
 L’esperienza di laboratorio è stata portata a termine, non senza difficoltà. Abbiamo riscontrato, infatti, alcuni problemi già nel momento del calcolo dei parametri del cavo: cercando, purtroppo in modo invano, di calcolare la lunghezza della matassa tramite la misura del ritardo di un pezzo di cavo coassiale preso a campione, abbiamo sprecato diversi minuti, il che non ci ha permesso di affrontare gli ultimi punti facoltativi del laboratorio. Non siamo riusciti a fare ciò, probabilmente a causa della risoluzione troppo bassa dello strumento a nostra disposizione oppure poiché ci siamo serviti di un cavo eccessivamente corto. Tuttavia siamo riusciti a superare il problema, come descritto in dettaglio nel diario dell’esperienza.  Inoltre…. 
 Tuttavia, i risultati trovati sono stati per lo più coerenti con le aspettative, dunque possiamo ritenerci piuttosto soddisfatti del lavoro svolto. 
