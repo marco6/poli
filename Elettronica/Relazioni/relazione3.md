@@ -87,11 +87,13 @@ Il valore ricavato risultava essere 0,62, calcolato dopo aver appreso dall'oscil
 
 Dopodichè abbiamo ripetuto la misura montando una resistenza da circa 33 Ohm (costruita con tre resistenze da 100 Ohm in parallelo). Questo ci ha permesso di verificare il fenomeno richiesto dall'esperienza anche se quest'ultima richiedeva una resistenza da 22 Ohm, in quanto, come ci hanno fatto notare gli assistenti di laboratorio, l'importante era avere un indice di riflessione negativo ed è quello che abbiamo verificato anche se con la resistenza diversa da quella data.
 
-(circuito 4)
+![alt text](../Schemi/Lab3/circuito_4.png "f")
 
 Con il multimetro abbiamo verificato l'effettivo valore delle tre resistenze in parallelo (circa 33,17 Ohm) e quindi calcolato l'indice di riflessione:
 
 ![](../Equazioni/3/Eq5.png "")
+
+con R0 = 44,514 Ohm
 
 Il risultato è il diagramma a traliccio seguente:
 
@@ -113,8 +115,8 @@ Quello che abbiamo constatato è stato che Vb rimaneva stabile per due tempi di 
 
 - *E) RIFLETTOMETRIA NEL DOMINIO DEL TEMPO:*
 
-Per questo punto serviva avere a disposizione due matasse di filo distinte: non essendocene però a sufficienza, l'assistente di laboratorio ci ha consigliato di svolgere quest'esperienza insieme ad un altro gruppo. La matassa in possesso di quest'ultimo era più corta della nostra (circa 14m contro i circa 18m della nostra).
-Abbiamo quindi collegato il canale 1 dell'oscilloscopio all'estremo vicino della prima matassa e il canale due all'estremo remoto della stessa, a cui era anche collegata la seconda matassa.
+Per questo punto serviva avere a disposizione due matasse di filo distinte: non essendocene però a sufficienza, l'assistente di laboratorio ci ha consigliato di svolgere quest'esperienza insieme ad un altro gruppo. La matassa in possesso di quest'ultimo era più corta della nostra (circa 14 m contro i circa 18 m della nostra).
+Abbiamo quindi collegato il canale 1 dell'oscilloscopio all'estremo vicino della prima matassa e il canale 2 all'estremo remoto della stessa, a cui era anche collegata la seconda matassa.
 
 ![alt text](../Schemi/Lab3/circuito_6.png "f")
 
@@ -123,7 +125,7 @@ Abbiamo dunque osservato sull'oscilloscopio che il gradino sul canale 1 (cioè s
 (foto)
 
 Questo risultato è coerente con le aspettative, poichè, se si sottrae al primo ritardo il secondo, si trova il ritardo dovuto solo alla prima matassa: 276-115 = 161 ns.
-Ora, dividendo il ritardo dovuto ad ognuna delle matasse a metà, si può ricavare la lunghezza approssimata dei due fili, sapendo che la velocità del segnale nel filo è di 0,78c (come avevamo trovato nel punto B):
+Ora, dividendo il ritardo dovuto ad ognuna delle matasse a metà, si può ricavare la lunghezza approssimata dei due fili, sapendo che la velocità del segnale nel filo è di 0,78 c (come avevamo trovato nel punto B):
 
 ![](../Equazioni/3/Eq7.png "")
 
@@ -136,7 +138,7 @@ con c = 300 000 000 m/s
 Per questa richiesta, come prima cosa, abbiamo iniziato con il prendere i vari componenti digitali necessari (74LS00, 74HC00, 74AC04).
 Abbiamo acceso l'alimentatore, settato il voltaggio di uscita a 5 V e controllato tale valore con il multimetro per sicurezza. Abbiamo quindi collegato il piedino di ground al riferimento del generatore e l'uscita dell'alimentazione al piedino Vcc. Dopodichè per testarne il funzionamento, abbiamo applicato all'ingresso dell'integrato la stessa onda quadra utilizzata durante tutta l'esperienza (Vpp = 4 V, f = 200 kHz e duty-cycle 50%) ed all'uscita la sonda dell'oscilloscopio.
 
-![alt text](../Schemi/Lab3/circuito_6.png "f")
+![alt text](../Schemi/Lab3/circuito_7.png "f")
 
 (foto 6)
 
