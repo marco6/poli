@@ -1,0 +1,4 @@
+CFLAGS = -Wall -g
+
+all: es1.o
+	gcc $(CFLAGS) -o es1 es1.o
