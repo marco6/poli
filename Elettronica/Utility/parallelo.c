@@ -9,7 +9,7 @@ int main(int argc, char**argv)
 
 	if(argc < 2) {
 		printf("utilizzo: parall R1 [R2] [R3] ...\n");
-		return;
+		return 0;
 	}
 
 	R2=atof(argv[1]);
