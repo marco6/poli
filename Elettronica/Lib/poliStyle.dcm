@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: ven 08 nov 2013 11:56:16 CET
+EESchema-DOCLIB  Version 2.0  Date: lun 25 nov 2013 16:16:17 CET
 #
 $CMP 74HC14P
 D Schmitt inverter 74hc14 con piedinatura
@@ -8,6 +8,11 @@ $ENDCMP
 $CMP 74LS00P
 D Schmitt inverter 74hc14 con piedinatura
 K 74hc14 schmitt inverter comparatore soglia
+$ENDCMP
+#
+$CMP CD4029
+D Contatore asincrono
+K contatore asincrono cd4040
 $ENDCMP
 #
 $CMP CD4040
@@ -25,9 +30,29 @@ D generatore di voltaggio
 K volt generatore voltaggio voltage generator
 $ENDCMP
 #
+$CMP GENERATORE_DI_TENSIONE
+D generatore di voltaggio
+K volt generatore voltaggio voltage generator
+$ENDCMP
+#
 $CMP GENERATORE_DI_VOLTAGGIO
 D generatore di voltaggio
 K volt generatore voltaggio voltage generator
+$ENDCMP
+#
+$CMP LED_ARRAY
+D Contatore asincrono
+K contatore asincrono cd4040
+$ENDCMP
+#
+$CMP LM741
+D Schmitt inverter 74hc14 con piedinatura
+K 74hc14 schmitt inverter comparatore soglia
+$ENDCMP
+#
+$CMP LM748
+D Schmitt inverter 74hc14 con piedinatura
+K 74hc14 schmitt inverter comparatore soglia
 $ENDCMP
 #
 $CMP NAND

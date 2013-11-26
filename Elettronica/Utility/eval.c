@@ -25,17 +25,22 @@ int main(int argc, char *argv[]) {
   for(i = 1; i<argc; i++){
     printf("%s = %lf\n", argv[i], eval(argv[i]));
     if(error){
-      printf("Errore nell'argomento %d: %d %s\n", i, (int)error, errs[(int)error-1]); 
+      printf("Errore nell'argomento %d: %s\n", i, errs[(int)error-1]); 
       error = none;
     }
   }
   return 0;
 }
 
+
 const char* bracket(const char*c, double*res){
   static double tmp;
   double larg = 0;
   int n;
+  if(c == NULL || *c == '\0'){
+    error = empty;
+    return 0;
+  }
   /* gli spazi non interessano.. */
   while(*c == ' ')
     c++;
@@ -72,7 +77,6 @@ const char* bracket(const char*c, double*res){
       else
 	c +=n;
 
-      puts(c);
       larg = larg * tmp / (fabs(larg) + tmp);
       break;
     case '+':
@@ -97,8 +101,11 @@ double eval(const char*c) {
   static double tmp;
   double larg = 0;
   int n;
-  if(c == NULL)
+  if(c == NULL || *c == '\0'){
+    error = empty;
     return 0;
+  }
+  // 1|2 + 3 + 2|3
   while(*c == ' ')
     c++;
   if(*c == '(' || *c == '[' || *c == '{')
@@ -110,7 +117,7 @@ double eval(const char*c) {
   else
     c += n;
 
-  while(*c != '\0' && error == none){
+  while(*c != '}' && *c != ']' && *c != ')' && *c != '\0' && error == none){
     while(*c == ' ')
       c++;
     switch(*c) {

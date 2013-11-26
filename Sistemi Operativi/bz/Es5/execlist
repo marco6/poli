@@ -1,4 +1,0 @@
-ls -laR 
-less mioFile.c 
-mkdir tmpDir 
-cp mioFile.c tmpDir 
