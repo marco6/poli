@@ -7,11 +7,9 @@ SQUADRA A06  – LED 9
 
 -	**Elenco dei dispositivi:**
 	
-o	Oscilloscopio Digitale Agilent DSO3102A  (Figura 1)
+o	Oscilloscopio Digitale Agilent DSO3102A 
 
 o	Cavi coassiali (BNC-BNC)
-
-o	Cavi coassiali (BNC-banana)
 
 o	Cavi banana-banana
 
@@ -23,14 +21,15 @@ o	Condensatori
 
 o	Piastra per montaggi sperimentale 
 
-o	Generatore di funzioni Agilent 33220A (Figura 3)
+o	Generatore di funzioni Agilent 33220A
 
-o	Contatore asincrono
+o	Contatore asincrono CD4029
 
-o	Comparatore di soglia
+o	Amplificatore operazionale (LM748, LM741)
 
 o	Schedina di LED con resistenza
 
+o	Multimetro digitale da banco Agilent 34401A
 
 
 -	**Scopo dell’esercitazione**
@@ -52,19 +51,21 @@ o Verificare il funzionamento di un convertitore A/D a inseguimento
  
 -	**DIARIO DELL’ESPERIENZA**
 
-o *Verificare il funzionamento di un convertitore D/A a 4 bit*
+o *VERIFICARE IL FUNZIONAMENTO DI UN CONVERTITORE D/A A 4 BIT*
 
 
 
 
 
-o *Individuare i punti critici per la nonlinearità differenziale*
 
-o *Individuare i punti critici per i glitch*
 
-o *Determinare gli errori di guadagno, offset, non linearità*
+o *INDIVIDUARE I PUNTI CRITICI PER LA NON LINEARITA' DIFFERENZIALE*
 
-o *Verificare il funzionamento di un convertitore A/D a inseguimento*
+o *INDIVIDUARE I PUNTI CRITICI PER I GLITCH*
+
+o *DETERMINARE GLI ERRORI DI GUADAGNO, OFFSET, NON LINEARITA'*
+
+o *VERIFICARE IL FUNZIONAMENTO DI UN CONVERTITORE A/D A INSEGUIMENTO*
 
 
 
