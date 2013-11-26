@@ -35,6 +35,15 @@ o	Schedina di LED con resistenza
 
 -	**Scopo dell’esercitazione**
 
+o Verificare il funzionamento di un convertitore D/A a 4 bit
+
+o Individuare i punti critici per la nonlinearità differenziale
+
+o Individuare i punti critici per i glitch
+
+o Determinare gli errori di guadagno, offset, non linearità
+
+o Verificare il funzionamento di un convertitore A/D a inseguimento
 
 
 -	**Cenni di teoria**
@@ -42,6 +51,22 @@ o	Schedina di LED con resistenza
 
  
 -	**DIARIO DELL’ESPERIENZA**
+
+o *Verificare il funzionamento di un convertitore D/A a 4 bit*
+
+
+
+
+
+o *Individuare i punti critici per la nonlinearità differenziale*
+
+o *Individuare i punti critici per i glitch*
+
+o *Determinare gli errori di guadagno, offset, non linearità*
+
+o *Verificare il funzionamento di un convertitore A/D a inseguimento*
+
+
 
 
 
