@@ -1,0 +1,26 @@
+14:int main(int argc, char *argv[]) {
+4:int main(int argc, char**argv)
+19:int main(int argc, char**argv){
+5:int main(int argv, char**argc){
+5:int main(int argc, char**argv){
+6:int main(int argc, char**argv) {
+5:int main () {
+14:int main(int argc, char**argv){
+5:int main(int argc, char*argv[]){
+14:int main(int argc, char *argv[]){
+24://Funzioni/variabili nascoste al main e in generale utili solo all'implementazione
+14:int main() {
+25:int main() {
+16:int main(int argc, char **argv){
+23:int main(int argc, char**argv){
+6:int main()
+6:int main(int argc, char ** argv)
+5:int main(int argc, char **argv)
+18:int main(){
+18:int main(){
+15:int main(){
+8:int main(){
+15:int main(){
+6:int main(){
+6:int main(int argc, char ** argv)
+9:  Description [The st library provides functions to create, maintain,
