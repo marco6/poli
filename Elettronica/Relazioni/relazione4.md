@@ -31,18 +31,18 @@ o	Schedina di LED con resistenza
 
 o	Multimetro digitale da banco Agilent 34401A
 
+o	Porte logiche NAND (74LS00)
+
 
 -	**Scopo dell’esercitazione**
 
 o Verificare il funzionamento di un convertitore D/A a 4 bit
 
-o Individuare i punti critici per la nonlinearità differenziale
-
-o Individuare i punti critici per i glitch
-
-o Determinare gli errori di guadagno, offset, non linearità
+o Individuare i punti critici per la nonlinearità differenziale e per i glitch
 
 o Verificare il funzionamento di un convertitore A/D a inseguimento
+
+Determinando man mano gli errori di guadagno, offset, non linearità.
 
 
 -	**Cenni di teoria**
@@ -59,7 +59,8 @@ Gli abbiamo quindi applicato, dopo i dovuti controlli con il muiltimetro, il seg
 
 Abbiamo poi montato il contatore come specificato, costruendo le resistenze da 20 k&Omega; e da 5 k&Omega; con due resistenze da 10 k&Omega; in serie ed in parallelo rispettivamente.
 
-(schema 1)
+(schema 1)  ![](../Schemi/Lab4/circuito_1.png "")
+
 
 Il segnale al terminale di uscita del convertitore (Vu) è una gradinata di 16 livelli equispaziati, come ci aspettavamo
 
@@ -67,7 +68,9 @@ Il segnale al terminale di uscita del convertitore (Vu) è una gradinata di 16 l
 
 Con i cursori dell'oscilloscopio, abbiamo misurato il fondo scala ed il valore del LSB che ci risultavano essere rispettivamente 5,04 V e 352 mV. 
 
-Collegando la basetta di LED abbiamo notato una riduzione del fondo scala da 5,04 V a 3,12 V e di conseguenza anche del LSB, da 352 mV a 220 mV. 
+Collegando la basetta di LED abbiamo notato una riduzione dell'intervallo da 5,04 V a 3,12 V e l'introduzione di un errore di offset di 1,92 V. Di conseguenza anche il LSB risulta minore (220 mV).
+
+(schema 2)
 
 ????????????????????????????????????????????? (punto 4)
 
@@ -78,7 +81,7 @@ Abbiamo inserito a in serie a R1 una resistenza da 6,6 k&Omega; (circa il 15% de
 (foto 3)
 
 
-o *INDIVIDUARE I PUNTI CRITICI PER LA NON LINEARITA' DIFFERENZIALE*
+o *INDIVIDUARE I PUNTI CRITICI PER LA NON LINEARITA' DIFFERENZIALE E PER I GLITCH*
 
 Per ottenere una non monotonicità, abbiamo calcolato il valore della resistenza da mettere in serie a R4:
  
@@ -88,14 +91,30 @@ Il valore effettivo che abbiamo dovuto inserire per ottenere un errore apprezzab
 
 (foto 4)
 
-
-o *INDIVIDUARE I PUNTI CRITICI PER I GLITCH*
-
 Per eseguire questo punto, abbiamo collegato tre condensatori da 0,5 nF in parallelo a Q1, Q3, Q4, verificando successivamente con l'oscilloscopio, la presenza di glitch.
 
-(foto 5)
+??????????????????????????????????????????????????????manca glitch su/giu
+(foto 5) (schema 3)
 
-o *DETERMINARE GLI ERRORI DI GUADAGNO, OFFSET, NON LINEARITA'*
+Riducendo di molto la frequenza del clock (0,5 Hz), abbiamo verificato con il multimetro che gli scalini sono equispaziati e che l'intervallo tra gradini adiacenti corrisponde ad un LSB. Collegando i LED i gradini risultano ancora equispaziati, ma la tensione minima risulta 1,92 V, mentre quella massima rimane sostanzialmente invariara; a causa di questo restringimento dell'intervallo, la differenza tra due scalini adiacenti risulta minore (circa 220 mV). (vedere schema 2)
+
+Utilizzando una restistenza di pull-up collegata al generatore ed un filo volante a massa come interruttore manuale.
+
+(schema 4)
+
+Questo interruttore, però, risultava instabile in quanto ad ogni commutazione generava dei rimbalzi che risultavano in un numero imprevedibile di impulsi. Per evitare questo comportamento abbiamo usato il componente 74LS00 montato come circuito antirimbalzo.
+
+(schema 5)
+
+Dovendo ottenere un fondo scala di -5 V, abbiamo iniziato a montare l'amplificatore di transresistenza (LM741). Dopo averlo alimentato, sotto consiglio dell'esercitatore abbiamo collegato il piedino di offset a quello di offset_null tramite un potenziometro, agendo su di esso per regolare la compensazione dell'offset: purtroppo non c'è stato un risultato apprezzabile.
+
+(foto 6) (schema 6)
+
+Dai nostri calcoli risulta che la resistenza di reazione deve essere di 2,66 k&Omega; che abbiamo approssimato con due resistenze da 5,6 k&Omega; ciascuna in parallelo. Montando quindi il circuito, il risultato non è stato, inizialmente, quello sperato. Con l'aiuto dell'esercitatore abbiamo scoperto che il malfunzionamento era causato da alcuni fili che non facevano contatto correttamente.
+
+(foto 7) (foto 8)
+
+
 
 
 
