@@ -132,6 +132,10 @@ o *VERIFICARE IL FUNZIONAMENTO DI UN CONVERTITORE A/D A INSEGUIMENTO*
 
 -	**Commenti**
 
+Questa esperienza è stata indubbiamente la più impegnativa delle tre svolte, soprattutto per il numero ingente di richieste da eseguire in sole tre ore. Infatti ci siamo visti costretti a fermarci oltre l’orario dovuto, grazie alla disponibilità dell’esercitatore, per poter portare a termine gli ultimi tre punti. 
+Abbiamo avuto qualche problema nello svolgimento del punto 11, il quale non ci ha permesso di concludere i punti 12 e 13, per cui siamo passati direttamente all’ultima richiesta sulla verifica della conversione A/D. Anche in questo punto purtroppo, però, abbiamo riscontrato dei problemi. Riuscivamo a costruire il circuito correttamente, ma inspiegabilmente non riuscivamo a visualizzare sull’oscilloscopio la forma d’onda che ci aspettavamo.
+
+Successivamente,
 
 
 
