@@ -40,6 +40,8 @@ o Verificare il funzionamento di un convertitore D/A a 4 bit
 
 o Individuare i punti critici per la nonlinearità differenziale e per i glitch
 
+o Verificare il funzionamento di un convertitore D/A a 4 bit con rete di resistenze a scala 
+
 o Verificare il funzionamento di un convertitore A/D a inseguimento
 
 Determinando man mano gli errori di guadagno, offset, non linearità.
@@ -74,7 +76,7 @@ Con i cursori dell'oscilloscopio, abbiamo misurato il fondo scala ed il valore d
 
 (schema 2) ![](../Schemi/Lab4/circuito_3.png "")
 
-????????????????????????????????????????????? (punto 4)
+Questo comportamento è dovuto alla resistenza del CMOS, la quale fa in modo che il voltaggio si ripartisca tra questa e la resistenza da 1 k&Omega; presente sulla basetta, incrementando così il livello dello stato low. Per eliminare questo effetto sarebbe sufficiente aumentare la resistenza tra diodo ed alimentazione. 
 
 (foto 2)
 
@@ -93,7 +95,8 @@ Abbiamo, quindi, inserito una resistenza di 3 kΩ ottenendo (foto 4)
 
 Per eseguire questo punto, abbiamo collegato tre condensatori da 0,5 nF in parallelo a Q1, Q3, Q4, verificando successivamente, con l'oscilloscopio, la presenza di glitch.
 
-??????????????????????????????????????????????????????manca glitch su/giu
+Il condensatore su Q1 dovrebbe generare dei glitch in corrispondenza di ogni scalino (uno verso l'alto ed uno verso il basso, alternativamente) che però non sono visibili perchè troppo piccoli. La presenza del carico capacitivo si può notare comunque perchè gli scalini risultano un po' più "smussati". L'effetto degli altri due condensatori è invece più facilmente visibile in corrispondenza delle variazioni L -> H ed H -> L del MSB e del MSB-1.
+
 (foto 5) (schema 4)  ![](../Schemi/Lab4/circuito_2.png "")
 
 Riducendo di molto la frequenza del clock (0,5 Hz), abbiamo verificato con il multimetro che gli scalini sono equispaziati e che l'intervallo tra gradini adiacenti corrisponde ad un LSB. Collegando i LED, i gradini risultano ancora equispaziati, ma la tensione minima risulta 1,92 V, mentre quella massima rimane sostanzialmente invariata; a causa di questo restringimento dell'intervallo, la differenza tra due scalini adiacenti risulta minore (circa 220 mV). (vedere schema 2)
@@ -106,7 +109,7 @@ Questo interruttore, però, risultava instabile in quanto ad ogni commutazione g
 
 (schema 6) ![](../Schemi/Lab4/circuito_5.png "")
 
-Dovendo ottenere un fondo scala di -5 V, abbiamo iniziato a montare l'amplificatore di transresistenza (LM741). Dopo averlo alimentato, sotto consiglio dell'esercitatore, abbiamo collegato il piedino di offset a quello di offset_null tramite un potenziometro, agendo su di esso per regolare la compensazione dell'offset: purtroppo non c'è stato un risultato apprezzabile.
+Dovendo ottenere un fondo scala di -5 V, abbiamo iniziato a montare l'amplificatore di transresistenza (LM748). Dopo averlo alimentato, sotto consiglio dell'esercitatore, abbiamo collegato il piedino di offset a quello di offset_null tramite un potenziometro, agendo su di esso per regolare la compensazione dell'offset: purtroppo non c'è stato un risultato apprezzabile.
 
 (foto 6) (schema 7) ![](../Schemi/Lab4/circuito_8.png "")
 
@@ -116,6 +119,22 @@ Una volta svolti i calcoli per ricavare il corretto valore di R5 (vincolato al v
 
 (schema 8)
 ![](../Schemi/Lab4/circuito_7.png "")
+
+o *VERIFICARE IL FUNZIONAMENTODI UN CONVERTITORE D/A A 4 BIT CON RETE DI RESISTENZE A SCALA*
+
+Per costruire la rete di resistenze a scala, abbiamo preso come riferimento R in modo che la resistenza di uscita del contatore rimanesse invariata.
+
+(formula 2) R = R1||R2||R3||R4 = 2,66 k&Omega;
+
+Per ottenere R abbiamo utilizzato due resistenze da 5,6 k&Omega; in parallelo, mentre per ottenere 2R abbiamo semplicemente utilizzato una da 5,6 k&Omega;. Dopo aver montato la rete a scala come si può vedere nella figura ? 
+
+(schema 9) (foto 9) ;
+
+abbiamo visualizzato sull'oscilloscopio il segnale a gradinata.
+
+(foto 10)
+
+Dopodichè, utilizzando i cursori, abbiamo misurato il fondo scala  ed il LSB che risultavano essere 4,84 V e 340 mV rispettivamente. 
 
 
 o *VERIFICARE IL FUNZIONAMENTO DI UN CONVERTITORE A/D A INSEGUIMENTO*
