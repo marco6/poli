@@ -1,0 +1,150 @@
+EESchema Schematic File Version 2  date gio 28 nov 2013 12:09:36 CET
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:poliStyle
+EELAYER 25  0
+EELAYER END
+$Descr A4 11700 8267
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "28 nov 2013"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L SALTO U?
+U 1 1 529723B8
+P 6300 4250
+F 0 "U?" H 6350 4300 60  0001 C CNN
+F 1 "SALTO" H 6300 4250 60  0001 C CNN
+	1    6300 4250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5500 3950 5250 3950
+Wire Wire Line
+	5800 4550 6300 4550
+Wire Wire Line
+	6300 4550 6300 4250
+Wire Wire Line
+	5500 4550 5500 4250
+Wire Wire Line
+	6550 4150 6200 4150
+Connection ~ 6550 4150
+Wire Wire Line
+	6200 4050 6300 4050
+Wire Wire Line
+	5500 4850 6050 4850
+Wire Wire Line
+	5550 3750 6400 3750
+Wire Wire Line
+	6400 3750 6400 4050
+$Comp
+L SALTO U?
+U 1 1 52972344
+P 6400 4150
+F 0 "U?" H 6450 4200 60  0001 C CNN
+F 1 "SALTO" H 6400 4150 60  0001 C CNN
+	1    6400 4150
+	-1   0    0    1   
+$EndComp
+$Comp
+L POTENZIMETRO 10
+U 1 1 52972326
+P 5250 3750
+F 0 "10 KOhm" V 5125 3750 40  0000 C CNN
+F 1 "POTENZIMETRO" H 5250 3800 60  0001 C CNN
+F 2 "~" H 5250 3800 60  0000 C CNN
+F 3 "~" H 5250 3800 60  0000 C CNN
+	1    5250 3750
+	1    0    0    -1  
+$EndComp
+Text Notes 6600 4150 0    60   ~ 0
+Vu
+$Comp
+L SALTO U?
+U 1 1 52971FDA
+P 6300 4150
+F 0 "U?" H 6350 4200 60  0001 C CNN
+F 1 "SALTO" H 6300 4150 60  0001 C CNN
+	1    6300 4150
+	-1   0    0    1   
+$EndComp
+$Comp
+L GENERATORE_DI_TENSIONE 10~V
+U 1 1 52971F15
+P 5800 4700
+F 0 "10 V" V 5925 4700 40  0000 C CNN
+F 1 "GENERATORE_DI_TENSIONE" H 5750 4700 60  0001 C CNN
+F 2 "~" H 5750 4700 60  0000 C CNN
+F 3 "~" H 5750 4700 60  0000 C CNN
+	1    5800 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GENERATORE_DI_TENSIONE 10~V
+U 1 1 52971F11
+P 5500 4700
+F 0 "10 V" V 5375 4700 40  0000 C CNN
+F 1 "GENERATORE_DI_TENSIONE" H 5450 4700 60  0001 C CNN
+F 2 "~" H 5450 4700 60  0000 C CNN
+F 3 "~" H 5450 4700 60  0000 C CNN
+	1    5500 4700
+	-1   0    0    1   
+$EndComp
+$Comp
+L LM748 U?
+U 1 1 52971DC2
+P 5850 4100
+F 0 "U?" H 5850 3850 60  0001 C CNN
+F 1 "LM748" H 5850 3850 60  0000 C CNN
+F 2 "~" H 5850 3850 60  0000 C CNN
+F 3 "~" H 5850 3850 60  0000 C CNN
+	1    5850 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L TERRA GND?
+U 1 1 529369E5
+P 6100 4850
+F 0 "GND?" H 6400 4850 60  0001 C CNN
+F 1 "TERRA" H 6100 4850 60  0001 C CNN
+F 2 "~" H 6100 4850 60  0000 C CNN
+F 3 "~" H 6100 4850 60  0000 C CNN
+	1    6100 4850
+	0    -1   -1   0   
+$EndComp
+$EndSCHEMATC
