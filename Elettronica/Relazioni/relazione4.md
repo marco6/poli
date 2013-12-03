@@ -72,7 +72,7 @@ Il segnale visualizzato al terminale di uscita del convertitore (Vu) è una grad
 
 Con i cursori dell'oscilloscopio, abbiamo misurato il fondo scala ed il valore del LSB che ci risultavano essere rispettivamente 5,04 V e 352 mV. In seguito, collegando la basetta di LED, abbiamo notato una riduzione dell'intervallo da 5,04 V a 3,12 V e l'introduzione di un errore di offset di 1,92 V. Di conseguenza anche il LSB risulta minore (220 mV).
 
-(schema 2)
+(schema 2) ![](../Schemi/Lab4/circuito_3.png "")
 
 ????????????????????????????????????????????? (punto 4)
 
@@ -80,7 +80,7 @@ Con i cursori dell'oscilloscopio, abbiamo misurato il fondo scala ed il valore d
 
 Abbiamo inserito in serie a R1 una resistenza da 6,6 k&Omega; (circa il 15% della prima) ed abbiamo verificato che gli scalini dei bit corrispondenti ai valori dispari si erano rimpiccioliti. Ripetendo l'esperienza con R3 (questa volta con una resistenza da 1,8 k&Omega;) abbiamo notato che a variare era invece un bit ogni quattro, seccondo quello che ci aspettavamo. 
 
-(foto 3)
+(foto 3) (schema 3) ![](../Schemi/Lab4/circuito_4.png "")
 
 
 o *INDIVIDUARE I PUNTI CRITICI PER LA NON LINEARITA' DIFFERENZIALE E PER I GLITCH*
@@ -89,35 +89,33 @@ Per ottenere una non monotonicità, abbiamo calcolato il valore della resistenza
  
 (formula 1)
 
-Il valore effettivo che abbiamo dovuto inserire per ottenere un errore apprezzabile, è stato di 3 k&Omega;.
-
-(foto 4)
+Abbiamo, quindi, inserito una resistenza di 3 kΩ ottenendo (foto 4)
 
 Per eseguire questo punto, abbiamo collegato tre condensatori da 0,5 nF in parallelo a Q1, Q3, Q4, verificando successivamente, con l'oscilloscopio, la presenza di glitch.
 
 ??????????????????????????????????????????????????????manca glitch su/giu
-(foto 5) (schema 3)
+(foto 5) (schema 4)  ![](../Schemi/Lab4/circuito_2.png "")
 
 Riducendo di molto la frequenza del clock (0,5 Hz), abbiamo verificato con il multimetro che gli scalini sono equispaziati e che l'intervallo tra gradini adiacenti corrisponde ad un LSB. Collegando i LED, i gradini risultano ancora equispaziati, ma la tensione minima risulta 1,92 V, mentre quella massima rimane sostanzialmente invariata; a causa di questo restringimento dell'intervallo, la differenza tra due scalini adiacenti risulta minore (circa 220 mV). (vedere schema 2)
 
 Abbiamo costruito un interruttore manuale utilizzando un filo volante collegato a massa ed una resistenza di pull-up collegata al generatore.
 
-(schema 4)
+(schema 5) ![](../Schemi/Lab4/circuito_6.png "")
 
 Questo interruttore, però, risultava instabile in quanto ad ogni commutazione generava dei rimbalzi che visualizzavamo sullo schermo dell'oscilloscopio come un numero imprevedibile di impulsi. Per evitare questo comportamento abbiamo usato il componente 74LS00 montato come circuito antirimbalzo.
 
-(schema 5)
+(schema 6) ![](../Schemi/Lab4/circuito_5.png "")
 
 Dovendo ottenere un fondo scala di -5 V, abbiamo iniziato a montare l'amplificatore di transresistenza (LM741). Dopo averlo alimentato, sotto consiglio dell'esercitatore, abbiamo collegato il piedino di offset a quello di offset_null tramite un potenziometro, agendo su di esso per regolare la compensazione dell'offset: purtroppo non c'è stato un risultato apprezzabile.
 
-(foto 6) (schema 6)
+(foto 6) (schema 7) ![](../Schemi/Lab4/circuito_8.png "")
 
 Una volta svolti i calcoli per ricavare il corretto valore di R5 (vincolato al valore di fondo scala dato), abbiamo trovato che la resistenza di reazione deve essere di 2,66 k&Omega; , che abbiamo approssimato con due resistenze in parallelo da 5,6 k&Omega; ciascuna. Montando quindi il circuito il risultato non è stato, inizialmente, quello sperato. Con l'aiuto dell'esercitatore abbiamo scoperto che il malfunzionamento era causato da alcuni fili che non facevano contatto correttamente.
 
 (foto 7) (foto 8)
 
-
-
+(schema 8)
+![](../Schemi/Lab4/circuito_7.png "")
 
 
 o *VERIFICARE IL FUNZIONAMENTO DI UN CONVERTITORE A/D A INSEGUIMENTO*
