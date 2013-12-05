@@ -128,7 +128,7 @@ Per costruire la rete di resistenze a scala, abbiamo preso come riferimento R in
 
 Per ottenere R abbiamo utilizzato due resistenze da 5,6 k&Omega; in parallelo, mentre per ottenere 2R abbiamo semplicemente utilizzato una da 5,6 k&Omega;. Dopo aver montato la rete a scala come si può vedere nella figura ? 
 
-(schema 9) (foto 9) ;
+(schema 9) (foto 9) ![](../Schemi/Lab4/circuito_9.png "")
 
 abbiamo visualizzato sull'oscilloscopio il segnale a gradinata.
 
@@ -139,16 +139,20 @@ Dopodichè, utilizzando i cursori, abbiamo misurato il fondo scala  ed il LSB ch
 
 o *VERIFICARE IL FUNZIONAMENTO DI UN CONVERTITORE A/D A INSEGUIMENTO*
 
+Per montare il cicuito ad inseguimento, abbiamo rimosso la resistenza di reazione e ne abbiamo posta una da 1 k&Omega; all'uscita dell'amplificatore, collegata successivamente al piedino up/down del contatore e ad un diodo Zener (da 3,3 V) posto a massa. 
 
+(schema 10)  ![](../Schemi/Lab4/circuito_10.png "")
+
+Abbiamo quindi impostato il secondo generatore di segnali (piuttosto datato) presente sul banco per generare un'onda sinusoidale di 20 Hz, tuttavia controllando il segnale di uscita mediante l'oscilloscopio, ci siamo accorti che non era corretto: non era possibile modificare la componente continua ed il segnale risultava notevolmente disturbato.
+Abbiamo di conseguenza deciso di usare come segnale di clock quello generato dall'oscilloscopio stesso (1 kHz e duty cycle 50%) e di utilizzare il generatore di segnali digitale (funzionante) per l'onda sinusoidale. Collegando questo segnale al morsetto non invertente del LM748, abbiamo ottenuto il risultato cercato, cioè abbiamo visualizzato l'onda a gradinata che seguiva l'andamento dell'onda sinusoidale posta sul morsetto non invertente.
+
+(foto 11) (foto 12) 
 
 
 
 -	**Commenti**
 
-Questa esperienza è stata indubbiamente la più impegnativa delle tre svolte, soprattutto per il numero ingente di richieste da eseguire in sole tre ore. Abbiamo avuto qualche problema nello svolgimento del punto 11, il quale non ci ha permesso di concludere i punti 12 e 13,  per cui siamo passati direttamente all’ultima richiesta sulla verifica della conversione A/D. Anche in questo punto purtroppo, però, abbiamo riscontrato dei problemi. Riuscivamo a costruire il circuito correttamente, ma inspiegabilmente non riuscivamo a visualizzare sull’oscilloscopio la forma d’onda che ci aspettavamo. Ci siamo, infatti, visti costretti a fermarci oltre l’orario dovuto, grazie alla disponibilità dell’esercitatore, per poter portare a termine gli ultimi tre punti.
-
-Successivamente,
-
-
+Questa esperienza è stata indubbiamente la più impegnativa delle tre svolte, soprattutto per il numero ingente di richieste da eseguire in sole tre ore. Abbiamo avuto qualche problema nello svolgimento del punto 11, per via di un malfunzionamento degli amplificatori, che però alla fine siamo fortunatamente riusciti a risolvere. Anche nello svolgimento dell'ultimo punto purtroppo, però, abbiamo riscontrato dei problemi. Riuscivamo a costruire il circuito correttamente, ma inspiegabilmente non riuscivamo a visualizzare sull’oscilloscopio la forma d’onda che ci aspettavamo. Cambiando poi il generatore di segnali siamo riusciti ad aggirare il problema, ma per portare a termine l’esperienza ci siamo visti costretti a fermarci oltre l’orario dovuto, grazie alla disponibilità dell’esercitatore.
+Nonostante tutto, ci siamo ritenuti abbastanza soddisfatti del lavoro.
 
 
