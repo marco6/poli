@@ -15,7 +15,7 @@ do
     for file in $(ls *.svg)
     do
 	echo -n "Converto $file..."
-	convert -density 144 $file -gravity Center -crop 90%x73%+0+0 -trim $(echo $file | cut -f 1 -d .).jpg
+	convert -density 144 $file -gravity Center -crop 90%x73%+0+0 -trim $(echo $file | cut -f 1 -d .).png
 	echo " Fatto!"
     done
     
