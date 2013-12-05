@@ -146,7 +146,7 @@ Per montare il cicuito ad inseguimento, abbiamo rimosso la resistenza di reazion
 Abbiamo quindi impostato il secondo generatore di segnali (piuttosto datato) presente sul banco per generare un'onda sinusoidale di 20 Hz, tuttavia controllando il segnale di uscita mediante l'oscilloscopio, ci siamo accorti che non era corretto: non era possibile modificare la componente continua ed il segnale risultava notevolmente disturbato.
 Abbiamo di conseguenza deciso di usare come segnale di clock quello generato dall'oscilloscopio stesso (1 kHz e duty cycle 50%) e di utilizzare il generatore di segnali digitale (funzionante) per l'onda sinusoidale. Collegando questo segnale al morsetto non invertente del LM748, abbiamo ottenuto il risultato cercato, cioè abbiamo visualizzato l'onda a gradinata che seguiva l'andamento dell'onda sinusoidale posta sul morsetto non invertente.
 
-(foto 11) (foto 12) 
+(foto 11) (foto 12) (foto 13)
 
 
 
