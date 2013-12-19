@@ -55,14 +55,26 @@ V_pp=3,74V +- 0,11V (con relativa incertezza del 3% da datasheet);
 nello stesso modo abbiamo ottenuto anche il valore efficace
 
 V_eff=1,31V +- 0,04V
-
-
-
+Veff = VA0oscil / (2*√2)
 
 
 TESTER
 
+Abbiamo predisposto il tester per la lettura del voltaggio in AC impostando come fondo scala 2V. 
+
+V_eff=1,32V +- (0,04V + 0,04V)
+
+R1: La lettura non deve essere moltiplicata per 2,22 in quanto lo strumento è già tarato er calcolare il valore efficace.
+
 MULTIMETRO
+
+Abbiamo predisposto il multimetro per la lettura del voltaggio in AC con il fondo scala automaticamente settato dallo strumento; in seguito abbiamo impostato anche AC filter in modalità slow per una migliore accuratezza
+
+V_eff=1,306V +- 
+
+VOLTMETRO DI PICCO
+
+
 
 
 
