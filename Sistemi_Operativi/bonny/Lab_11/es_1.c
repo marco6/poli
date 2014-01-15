@@ -4,6 +4,13 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
+#define pipe_1 pipes[0]
+#define pipe_2 pipes[1]
+#define pipe_3 pipes[2]
+#define pipe_4 pipes[3]
+#define pipe_5 pipes[4]
+#define pipe_6 pipes[5]
+
 /*      A  <-------- */
 /*   /  |  \       ^ */
 /*  /   |   \      | */
@@ -20,16 +27,11 @@
 
 int main(){
   
-  int pipe_1[2],pipe_2[2],pipe_3[2],pipe_4[2],pipe_5[2],pipe_6[2];
+  int pipes[6][2];
   char c = 'f';
   int i;
   
-  pipe(pipe_1);
-  pipe(pipe_2);
-  pipe(pipe_3);
-  pipe(pipe_4);
-  pipe(pipe_5);
-  pipe(pipe_6);
+  for(i=0;i<6;i++) pipe(pipes[i]);
 
   write(pipe_6[1],&c,1);
   
